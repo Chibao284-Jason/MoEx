@@ -86,7 +86,10 @@ export const colors = {
   vulcan: '#141523',
   whisper: '#F8F7FA',
   mountainMeadow: '#12B886',
-  athensGray: '#F9F9FB'
+  athensGray: '#F9F9FB',
+  linkWater: '#EEF2FA',
+  ebonyClay: '#222639',
+  portage: '#8B82EF'
 };
 
 export const colorDefaultTheme: ThemeColors = {
@@ -95,27 +98,43 @@ export const colorDefaultTheme: ThemeColors = {
   backgroundCard: colors.white,
   line: colors.whisper,
   backgroundItem: colors.white,
+  backgroundCardSignal: colors.white,
+
+  //COLOR BORDER
+  borderColorCard: colors.linkWater,
 
 
   //COLORS TITLE
   heading: colors.tangaroa,
   textDesc: colors.manatee,
   textIncrease: colors.mountainMeadow,
-  textUtilities: colors.tangaroa
+  textUtilities: colors.tangaroa,
+  textSignalStatus: colors.white,
+  textViewAll: colors.persianBlue,
+  textCard: colors.tangaroa,
 }
 export const colorDarkTheme: ThemeColors = {
   ...colorDefaultTheme,
 
   //COLORS VIEW DARK 
   backgroundGlobal: colors.vulcan,
+  // backgroundCard: colors.blue_black,
   backgroundCard: colors.blue_black,
   line: colors.mirage,
   backgroundItem: colors.mirage,
+  backgroundCardSignal: colors.ebonyClay,
+
+  //COLOR BORDER
+  borderColorCard: colors.transparent,
 
   //COLORS TITLE DARK
   heading: colors.geyser,
   textDesc: colors.manatee,
   textIncrease: colors.mountainMeadow,
-  textUtilities: colors.geyser
+  textUtilities: colors.geyser,
+  textSignalStatus: colors.white,
+  textViewAll: colors.portage,
+  textCard: colors.geyser,
+
 
 }

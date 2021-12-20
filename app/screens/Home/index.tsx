@@ -10,7 +10,7 @@ const HomeScreen = (props: HomeScreenProps) => {
   const styles = style(colors as ThemeColors);
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Home />
       </ScrollView>
     </SafeAreaView>

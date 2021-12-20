@@ -1,4 +1,4 @@
-import {colorsTheme} from '@config';
+import {colorsTheme, variableGlobal} from '@config';
 import {ViewStyle, TextStyle, ImageStyle} from 'react-native';
 type Styles = {
   container: ViewStyle;
@@ -14,9 +14,14 @@ type Styles = {
 
 export const style = (colors: ThemeColors): Styles => ({
   container: {
-    paddingVertical: 20,
+    marginTop: variableGlobal.marginTopGlobal,
   },
-  contentStyle: {padding: 20},
+  contentStyle: {
+    paddingLeft: variableGlobal.paddingHorizontalGlobal,
+    marginTop: variableGlobal.marginBottomTitle,
+    paddingTop: variableGlobal.paddingHorizontalGlobal,
+    paddingBottom: 20,
+  },
   subTitleStyle: {
     color: colorsTheme.grayApprox,
   },

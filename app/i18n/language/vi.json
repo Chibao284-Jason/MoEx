@@ -3,7 +3,11 @@
     "NOTIFICATIONS":"Thông báo"
   },
   "COMPLETED_KYC": "Hoàn tất KYC",
-  "DESC_COMPLETED_KYC":"Để bắt đầu mua, bán, giao dịch tài sản số trên Attlas",
+  "DESC_COMPLETED_KYC":"Để bắt đầu mua, bán, giao dịch tài sản số trên MoEx",
   "UTILITIES":"Tiện ích",
-  "TOTAL_ASSETS":"Tổng tài sản"
+  "TOTAL_ASSETS":"Tổng tài sản",
+  "SIGNAL":"Tín hiệu",
+  "VIEW_ALL":"Xem tất cả",
+  "INVESTMENT_HANDBOOK":"Cẩm nang đầu tư",
+  "TOP_MOVERS":"Biến động mạnh"
 }

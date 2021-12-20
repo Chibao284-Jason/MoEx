@@ -20,10 +20,10 @@ const Voucher = (props: IVoucherProps) => {
           <TouchableOpacity style={{margin: 5}}>
             <AutoHeightImage
               source={{
-                uri: 'https://coin68.com/wp-content/uploads/2021/06/Attlas-Refferal.png',
+                uri: 'https://blog.attlas.io/wp-content/uploads/2021/08/Attlas_REVV-token-listing-Attlas-07-1024x642.jpg',
               }}
               width={250}
-              style={{borderRadius: 8, flex: 1}}
+              style={{borderRadius: 8}}
             />
           </TouchableOpacity>
         );

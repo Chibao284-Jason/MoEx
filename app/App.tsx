@@ -3,7 +3,7 @@
  * Everything starts from the Entry-point
  */
 import React, {useEffect} from 'react';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, LogBox} from 'react-native';
 import {Provider, useSelector} from 'react-redux';
 import {PersistGate} from 'redux-persist/es/integration/react';
 import {Provider as PaperProvider} from 'react-native-paper';
@@ -12,7 +12,7 @@ import {
   PaperThemeDark,
   CombinedDefaultTheme,
   CombinedDarkTheme,
-} from '@config/theme-config';
+} from '@config';
 import Navigator from '@navigation/index';
 import configureStore from './store';
 import {IThemeState} from '@models/reducers/theme';
@@ -44,6 +44,7 @@ const RootNavigation: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  LogBox.ignoreAllLogs();
   return (
     <Provider store={store}>
       <PersistGate loading={<ActivityIndicator />} persistor={persistor}>

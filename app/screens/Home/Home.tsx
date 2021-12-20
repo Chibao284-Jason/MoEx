@@ -10,6 +10,8 @@ import WalletVoucher from '@components/WalletVoucherComponent/WalletVoucher';
 import {useTheme} from 'react-native-paper';
 import UtilitiesComponent from '@components/UtilitiesComponent/UtilitiesComponent';
 import TopMoversList from '@components/TopMoversComponent/TopMoversList';
+import SignalList from '@components/SignalComponent/SignalList';
+import HandBookList from '@components/HandBookCardComponent/HandBookList';
 interface HomeScreenProps {}
 interface IState {
   themeReducer: IThemeState;
@@ -42,6 +44,8 @@ const Home = (props: HomeScreenProps) => {
       <WalletVoucher />
       <UtilitiesComponent isDark={isDark} />
       <TopMoversList isDark={isDark} />
+      <SignalList />
+      <HandBookList isDark={isDark} />
     </View>
   );
 };

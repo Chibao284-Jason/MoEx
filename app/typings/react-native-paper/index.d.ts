@@ -19,4 +19,9 @@ interface ThemeColors {
   textIncrease: string
   textUtilities: string
   backgroundItem: string
+  textSignalStatus: string
+  borderColorCard: string
+  backgroundCardSignal: string
+  textViewAll: string
+  textCard: string
 }

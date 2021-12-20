@@ -4,5 +4,9 @@
   },
   "COMPLETED_KYC": "Completed KYC",
   "DESC_COMPLETED_KYC":"To start buying, selling, trading digital assets on Atlas",
-  "TOTAL_ASSETS":"Utilities"
+  "TOTAL_ASSETS":"Utilities",
+  "SIGNAL":"Signal",
+  "VIEW_ALL":"View all",
+  "INVESTMENT_HANDBOOK":"Investment Handbook",
+  "TOP_MOVERS":"Top Movers"
 }

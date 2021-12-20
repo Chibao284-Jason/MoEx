@@ -7,8 +7,14 @@ const scale = (size: number, fontSize?: number) => {
 };
 export const variableGlobal = {
   paddingVerticalGlobal: 10,
-  paddingHorizontalGlobal: 10,
+  paddingHorizontalGlobal: 15,
   marginTopGlobal: 10,
-  marginHorizontalGlobal: 20,
-  fontSizeGlobal: 14
+  marginHorizontalGlobal: 10,
+  marginBottomCard: 5,
+  marginBottomTitle: 20,
+  marginRightCard: 15,
+  paddingLeftCard: 15,
+  marginVerticalCard: 25,
+  fontSizeGlobal: 14,
+  borderRadiusCard: 8
 }

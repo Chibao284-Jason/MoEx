@@ -20,7 +20,7 @@ const TopMoversList = (props: TopMoversListProps) => {
   return (
     <View>
       <TitleComponent
-        title="Top Movers"
+        title={t('TOP_MOVERS')}
         subTitle="24H"
         isSubtitle={true}
         subTitleStyle={styles.subTitleStyle}
@@ -28,12 +28,11 @@ const TopMoversList = (props: TopMoversListProps) => {
       <LinearGradient
         colors={
           !isDark
-            ? ['#FFFFFF', '#F4F4F6', '#F4F4F6', '#F5F5F7', '#FFFFFF']
+            ? ['#FFFFFF', '#F4F4F6', '#F4F4F6', '#F4F4F6', '#FFFFFF']
             : ['#131522', '#131522']
         }
         start={{x: 0, y: 0}}
-        end={{x: 0, y: 1}}
-        style={styles.container}>
+        end={{x: 0, y: 1}}>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
