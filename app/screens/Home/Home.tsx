@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
 import TouchableVerify from '@components/VerifyAccountComponent/TouchableVerify';
 import ThemeController from '@components/ThemeController';
@@ -7,11 +7,11 @@ import {useSelector} from 'react-redux';
 import {IThemeState} from '@models/reducers/theme';
 import {LineLarge} from '@components/LineComponent/LineLarge';
 import WalletVoucher from '@components/WalletVoucherComponent/WalletVoucher';
-import {useTheme} from 'react-native-paper';
 import UtilitiesComponent from '@components/UtilitiesComponent/UtilitiesComponent';
 import TopMoversList from '@components/TopMoversComponent/TopMoversList';
 import SignalList from '@components/SignalComponent/SignalList';
 import HandBookList from '@components/HandBookCardComponent/HandBookList';
+import CardNewsList from '@components/CardNewsComponent.tsx/CardNewsList';
 interface HomeScreenProps {}
 interface IState {
   themeReducer: IThemeState;
@@ -46,6 +46,7 @@ const Home = (props: HomeScreenProps) => {
       <TopMoversList isDark={isDark} />
       <SignalList />
       <HandBookList isDark={isDark} />
+      <CardNewsList />
     </View>
   );
 };

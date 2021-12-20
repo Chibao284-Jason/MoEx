@@ -9,7 +9,7 @@ export const variableGlobal = {
   paddingVerticalGlobal: 10,
   paddingHorizontalGlobal: 15,
   marginTopGlobal: 10,
-  marginHorizontalGlobal: 10,
+  marginHorizontalGlobal: 20,
   marginBottomCard: 5,
   marginBottomTitle: 20,
   marginRightCard: 15,

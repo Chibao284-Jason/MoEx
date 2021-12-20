@@ -4,6 +4,7 @@ import { colorsTheme } from "@config";
 type Styles = {
   containerBody: ViewStyle,
   container: ViewStyle,
+  viewTitle: ViewStyle,
   viewCard: ViewStyle,
   viewDesc: ViewStyle,
   button: ViewStyle,
@@ -18,10 +19,13 @@ export const style = (colors: ThemeColors): Styles => ({
   containerBody: {
     marginHorizontal: variableGlobal.marginHorizontalGlobal,
     marginBottom: variableGlobal.marginBottomCard,
-
+    // backgroundColor: "red"r
+  },
+  viewTitle: {
+    marginBottom: variableGlobal.marginBottomTitle
   },
   container: {
-    marginBottom: 20
+    marginBottom: variableGlobal.marginBottomTitle
   },
   viewCard: {
     marginTop: variableGlobal.marginTopGlobal,

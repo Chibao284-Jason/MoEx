@@ -1,13 +1,13 @@
 import TitleComponent from '@components/TitleComponent/TitleComponent';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import {useTheme} from 'react-native-paper';
-import SignalItem from './SignalItem';
+import CardNewsItem from './CardNewsItem';
 import {style} from './styles';
-interface SignalListProps {}
-const dataExample = [0, 1, 2];
-const SignalList = (props: SignalListProps) => {
+interface CardNewListProps {}
+const dataExample = [0, 1, 2, 3];
+const CardNewList = (props: CardNewListProps) => {
   const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
@@ -15,17 +15,19 @@ const SignalList = (props: SignalListProps) => {
     <View style={styles.container}>
       <View style={styles.viewTitle}>
         <TitleComponent
-          title={t('SIGNAL')}
-          subTitle={t('VIEW_ALL')}
+          title="Tin tức mới"
           isSubtitle={true}
+          subTitle={t('VIEW_ALL')}
           subTitleStyle={styles.textViewAll}
         />
       </View>
-      {dataExample.map(item => {
-        return <SignalItem />;
-      })}
+      <View style={styles.containerBody}>
+        {dataExample.map(item => {
+          return <CardNewsItem />;
+        })}
+      </View>
     </View>
   );
 };
 
-export default SignalList;
+export default CardNewList;
