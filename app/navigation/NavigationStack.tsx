@@ -9,7 +9,7 @@ import {useSelector} from 'react-redux';
 import {navigationRef} from './NavigationService';
 
 import Login from 'app/screens/Login';
-import Home from 'app/screens/Home';
+import HomeScreen from '@screens/Home';
 import ForgotPassword from 'app/screens/ForgotPassword';
 
 import ThemeController from '../components/ThemeController';
@@ -21,11 +21,12 @@ const AuthStack = createStackNavigator();
 const LoggedInStack = createStackNavigator();
 
 const homeOptions: StackNavigationOptions = {
-  title: 'Home',
-  headerTitleStyle: {
-    fontWeight: 'bold',
-  },
-  headerRight: () => <ThemeController />,
+  // title: 'Home',
+  // headerTitleStyle: {
+  //   fontWeight: 'bold',
+  // },
+  // headerRight: () => <ThemeController />,
+  headerShown: false,
 };
 
 interface IState {
@@ -68,7 +69,7 @@ const AuthNavigator = () => {
 
 const LoggedInNavigator = () => (
   <LoggedInStack.Navigator>
-    <Stack.Screen name="Home" component={Home} options={homeOptions} />
+    <Stack.Screen name="Home" component={HomeScreen} options={homeOptions} />
   </LoggedInStack.Navigator>
 );
 

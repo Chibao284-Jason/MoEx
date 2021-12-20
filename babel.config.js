@@ -19,7 +19,7 @@ module.exports = {
           '@navigation': './app/navigation/',
           '@models': './app/models/',
           '@constants': './app/constants/',
-          '@config': './app/config/',
+          '@config': './app/config',
         },
       },
     ],

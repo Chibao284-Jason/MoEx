@@ -10,7 +10,7 @@ const config = {
   key: 'root',
   storage: AsyncStorage,
   blacklist: ['loadingReducer'],
-  whitelist: ['languageReducer', 'themeReducer'],
+  whitelist: ['languageReducer', 'themeReducer', 'loginReducer'],
   debug: true, //to get useful logging
 };
 

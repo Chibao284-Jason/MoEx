@@ -17,7 +17,6 @@ export const colors = {
   gray2: '#E6E7E9',
   gray3: '#E8E8E8',
   gray4: '#99A0B0',
-  athensGray: "#E9ECEF",
   white: '#FFFFFF',
   white1: '#D9D9D9',
   white2: '#F5F5F5',
@@ -78,12 +77,45 @@ export const colors = {
   allports: "#006F9C",
   milanoRed: '#B3110D',
   grayApprox: '#888888',
-  dodgerBlue: '#1ECDFF'
+  dodgerBlue: '#1ECDFF',
+  persianBlue: '#4021D0',
+  geyser: '#DBE3E6',
+  tangaroa: '#02083D',
+  manatee: '#8B8C9B',
+  mirage: '#191A2A',
+  vulcan: '#141523',
+  whisper: '#F8F7FA',
+  mountainMeadow: '#12B886',
+  athensGray: '#F9F9FB'
 };
 
 export const colorDefaultTheme: ThemeColors = {
+  // COLORS VIEW
   backgroundGlobal: colors.white,
+  backgroundCard: colors.white,
+  line: colors.whisper,
+  backgroundItem: colors.white,
+
+
+  //COLORS TITLE
+  heading: colors.tangaroa,
+  textDesc: colors.manatee,
+  textIncrease: colors.mountainMeadow,
+  textUtilities: colors.tangaroa
 }
 export const colorDarkTheme: ThemeColors = {
-  backgroundGlobal: colors.blue_black,
+  ...colorDefaultTheme,
+
+  //COLORS VIEW DARK 
+  backgroundGlobal: colors.vulcan,
+  backgroundCard: colors.blue_black,
+  line: colors.mirage,
+  backgroundItem: colors.mirage,
+
+  //COLORS TITLE DARK
+  heading: colors.geyser,
+  textDesc: colors.manatee,
+  textIncrease: colors.mountainMeadow,
+  textUtilities: colors.geyser
+
 }

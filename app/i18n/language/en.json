@@ -1,5 +1,8 @@
 {
   "GENERAL":{
     "NOTIFICATIONS":"Notifications"
-  }
+  },
+  "COMPLETED_KYC": "Completed KYC",
+  "DESC_COMPLETED_KYC":"To start buying, selling, trading digital assets on Atlas",
+  "TOTAL_ASSETS":"Utilities"
 }

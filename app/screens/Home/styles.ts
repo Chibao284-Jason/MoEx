@@ -1,11 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ViewStyle } from 'react-native';
 
-const styles = StyleSheet.create({
+type Styles = {
+  container: ViewStyle;
+}
+const style = (colors: ThemeColors): Styles => ({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: colors.backgroundGlobal
   },
 });
 
-export default styles;
+export default style;

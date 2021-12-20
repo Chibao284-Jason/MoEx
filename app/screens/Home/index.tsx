@@ -1,48 +1,20 @@
-import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
-import {Button} from 'react-native-paper';
+import * as React from 'react';
+import {Text, SafeAreaView, ScrollView} from 'react-native';
+import {useTheme} from 'react-native-paper';
+import Home from './Home';
+import style from './styles';
+interface HomeScreenProps {}
 
-import {useDispatch} from 'react-redux';
-import * as loginActions from 'app/store/actions/loginActions';
-import styles from './styles';
-import {WebView} from 'react-native-webview';
-const Home: React.FC = () => {
-  // const dispatch = useDispatch();
-  // const onLogout = () => dispatch(loginActions.logOut());
-
-  // return (
-  //   <View style={styles.container}>
-  //     <Button icon="logout" mode="outlined" onPress={onLogout}>
-  //       Logout
-  //     </Button>
-  //   </View>
-  // );
+const HomeScreen = (props: HomeScreenProps) => {
+  const {colors} = useTheme();
+  const styles = style(colors as ThemeColors);
   return (
-    <ScrollView style={{flex: 1}}>
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'red',
-          paddingVertical: 25,
-        }}>
-        <Text>Header</Text>
-      </View>
-      <WebView
-        source={{uri: 'https://nasanax.com/vi/'}}
-        style={{flex: 1, height: 600}}
-      />
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'green',
-          paddingVertical: 25,
-        }}>
-        <Text>Footer</Text>
-      </View>
-    </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        <Home />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
-export default Home;
+export default HomeScreen;

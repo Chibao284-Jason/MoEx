@@ -12,4 +12,11 @@ interface ThemeColors {
   backdrop?: string;
   notification?: string;
   backgroundGlobal: string;
+  heading: string,
+  textDesc: string
+  line: string
+  backgroundCard: string
+  textIncrease: string
+  textUtilities: string
+  backgroundItem: string
 }

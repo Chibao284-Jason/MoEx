@@ -1,5 +1,9 @@
 {
   "GENERAL":{
     "NOTIFICATIONS":"Thông báo"
-  }
+  },
+  "COMPLETED_KYC": "Hoàn tất KYC",
+  "DESC_COMPLETED_KYC":"Để bắt đầu mua, bán, giao dịch tài sản số trên Attlas",
+  "UTILITIES":"Tiện ích",
+  "TOTAL_ASSETS":"Tổng tài sản"
 }
