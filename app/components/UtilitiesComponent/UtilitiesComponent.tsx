@@ -1,4 +1,6 @@
 import TitleComponent from '@components/TitleComponent/TitleComponent';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
@@ -14,6 +16,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
   const {isDark} = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
+  const navigation = useNavigation();
   const dataExample = [
     {
       id: 0,
@@ -87,7 +90,9 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
         {dataExample.map(item => {
           return (
             <View style={styles.viewContainerButton}>
-              <TouchableOpacity style={styles.viewButton}>
+              <TouchableOpacity
+                style={styles.viewButton}
+                onPress={() => navigation.navigate(screenName.COMING_SOON)}>
                 <AutoHeightImage source={item.img} width={25} />
                 <Text numberOfLines={1} style={styles.label}>
                   {item.label}

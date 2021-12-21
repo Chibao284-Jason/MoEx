@@ -2,11 +2,18 @@
   "GENERAL":{
     "NOTIFICATIONS":"Notifications"
   },
+  "GO_BACK":"Back",
   "COMPLETED_KYC": "Completed KYC",
   "DESC_COMPLETED_KYC":"To start buying, selling, trading digital assets on Atlas",
   "TOTAL_ASSETS":"Utilities",
   "SIGNAL":"Signal",
   "VIEW_ALL":"View all",
   "INVESTMENT_HANDBOOK":"Investment Handbook",
-  "TOP_MOVERS":"Top Movers"
+  "TOP_MOVERS":"Top Movers",
+  "COMING_SOON":"COMING SOON",
+  "HOME":"Home",
+  "MARKET":"Market",
+  "NOTIFY":"Notify",
+  "EXCHANGE":"Exchange",
+  "WALLET":"Wallet"
 }

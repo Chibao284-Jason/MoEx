@@ -16,11 +16,12 @@ interface TopMoversItemProps {
   symbol: string;
   price: number;
   percentChange: number;
+  onPressUtilities?: () => void;
 }
 
 const TopMoversItem = (props: TopMoversItemProps) => {
   const {colors} = useTheme();
-  const {id, symbol, price, percentChange} = props;
+  const {id, symbol, price, percentChange, onPressUtilities} = props;
   const animatedValue = new Animated.Value(1);
   const styles = style(colors as ThemeColors);
   const handlePressIn = () => {
@@ -45,9 +46,7 @@ const TopMoversItem = (props: TopMoversItemProps) => {
     <TouchableOpacity
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
-      onPress={() => {
-        console.log(symbol);
-      }}
+      onPress={onPressUtilities}
       style={styles.containerItem}>
       <Animated.View style={[styles.listItem, animatedStyle]}>
         <Image

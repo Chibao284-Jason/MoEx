@@ -1,5 +1,7 @@
 import TitleComponent from '@components/TitleComponent/TitleComponent';
 import {colorsTheme} from '@config';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text, View, StyleSheet, FlatList} from 'react-native';
@@ -17,6 +19,7 @@ const TopMoversList = (props: TopMoversListProps) => {
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const {isDark} = props;
+  const navigation = useNavigation();
   return (
     <View>
       <TitleComponent
@@ -29,7 +32,7 @@ const TopMoversList = (props: TopMoversListProps) => {
         colors={
           !isDark
             ? ['#FFFFFF', '#F4F4F6', '#F4F4F6', '#F4F4F6', '#FFFFFF']
-            : ['#131522', '#131522']
+            : [colorsTheme.blue_black, colorsTheme.blue_black]
         }
         start={{x: 0, y: 0}}
         end={{x: 0, y: 1}}>
@@ -45,6 +48,9 @@ const TopMoversList = (props: TopMoversListProps) => {
                 percentChange={0.1}
                 price={12.3}
                 symbol="BTC"
+                onPressUtilities={() =>
+                  navigation.navigate(screenName.COMING_SOON)
+                }
               />
             );
           }}

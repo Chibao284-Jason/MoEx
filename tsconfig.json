@@ -46,7 +46,7 @@
       "@components/*": ["./app/components/*"],
       "@lib/*": ["./app/lib/*"],
       "@models/*": ["./app/models/*"],
-      "@navigation/*": ["./app/navigation/*"],
+      "@navigation": ["./app/navigation"],
       "@screens/*": ["./app/screens/*"],
       "@services/*": ["./app/services/*"],
       "@store/*": ["./app/store/*"],

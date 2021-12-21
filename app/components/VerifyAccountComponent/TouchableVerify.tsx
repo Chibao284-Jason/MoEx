@@ -6,15 +6,16 @@ import {style} from './styles';
 import {useTranslation} from 'react-i18next';
 interface TouchableVerifyProps {
   isDark: boolean;
+  onPressVerify?: () => void;
 }
 
 const TouchableVerify = (props: TouchableVerifyProps) => {
   const {colors} = useTheme();
   const {t} = useTranslation();
-  const {isDark} = props;
+  const {isDark, onPressVerify} = props;
   const styles = style(colors as ThemeColors);
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPressVerify}>
       <View style={{width: '30%'}}>
         <AutoHeightImage
           source={require('../../assets/img/svgVerify.png')}

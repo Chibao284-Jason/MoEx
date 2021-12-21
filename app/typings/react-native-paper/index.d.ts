@@ -24,4 +24,7 @@ interface ThemeColors {
   backgroundCardSignal: string
   textViewAll: string
   textCard: string
+  textColorButton: string
+  backgroundButton: string
+  textHeader: string
 }

@@ -15,6 +15,10 @@ import ForgotPassword from 'app/screens/ForgotPassword';
 import ThemeController from '../components/ThemeController';
 import {StatusBar} from 'react-native';
 import {ILoginState} from 'app/models/reducers/login';
+import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
+import {screenName} from './screenName';
+import {BottomTabs} from './BottomTabs';
+import SignalScreen from '@screens/Signal';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -69,7 +73,27 @@ const AuthNavigator = () => {
 
 const LoggedInNavigator = () => (
   <LoggedInStack.Navigator>
-    <Stack.Screen name="Home" component={HomeScreen} options={homeOptions} />
+    {/* <Stack.Screen
+      name={screenName.HOME}
+      component={HomeScreen}
+      options={homeOptions}
+    />
+     */}
+    <Stack.Screen
+      name={'BottomTab'}
+      component={BottomTabs}
+      options={homeOptions}
+    />
+    <Stack.Screen
+      name={screenName.COMING_SOON}
+      component={ComingSoon}
+      options={homeOptions}
+    />
+    <Stack.Screen
+      name={screenName.SIGNAL}
+      component={SignalScreen}
+      options={homeOptions}
+    />
   </LoggedInStack.Navigator>
 );
 

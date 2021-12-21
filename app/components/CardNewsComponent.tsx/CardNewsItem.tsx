@@ -5,16 +5,19 @@ import AutoHeightImage from 'react-native-auto-height-image';
 import {style} from './styles';
 import {useTranslation} from 'react-i18next';
 import {LineLarge} from '@components/LineComponent/LineLarge';
-interface CardNewsItemProps {}
+interface CardNewsItemProps {
+  onPressCardNews?: () => void;
+}
 
 const CardNewsItem = (props: CardNewsItemProps) => {
+  const {onPressCardNews} = props;
   const {colors} = useTheme();
   const {t} = useTranslation();
   const styles = style(colors as ThemeColors);
   return (
     <View style={styles.viewItem}>
       <View style={{marginBottom: 20}}>
-        <TouchableOpacity style={styles.viewCard}>
+        <TouchableOpacity style={styles.viewCard} onPress={onPressCardNews}>
           <View
             style={{
               width: '60%',

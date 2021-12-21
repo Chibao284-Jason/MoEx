@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
-import {Text, View, TouchableOpacity, ImageBackground} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import {style} from './styles';
 import {useTheme} from 'react-native-paper';
 import {useTranslation} from 'react-i18next';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {FlatList} from 'react-native-gesture-handler';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 interface WalletVoucherProps {}
-interface IVoucherProps {}
+interface IVoucherProps {
+  onPressVoucher?: () => void;
+}
 const Voucher = (props: IVoucherProps) => {
+  const navigation = useNavigation();
   return (
     <FlatList
       data={[0, 1]}
@@ -17,7 +22,9 @@ const Voucher = (props: IVoucherProps) => {
       contentContainerStyle={{paddingHorizontal: 10}}
       renderItem={({item}) => {
         return (
-          <TouchableOpacity style={{margin: 5}}>
+          <TouchableOpacity
+            style={{margin: 5}}
+            onPress={() => navigation.navigate(screenName.COMING_SOON)}>
             <AutoHeightImage
               source={{
                 uri: 'https://blog.attlas.io/wp-content/uploads/2021/08/Attlas_REVV-token-listing-Attlas-07-1024x642.jpg',

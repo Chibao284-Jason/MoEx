@@ -2,7 +2,13 @@ import ButtonHeaderComponent from '@components/ButtonHeaderComponent/ButtonHeade
 import {style} from './styles';
 import * as React from 'react';
 import {useTheme} from 'react-native-paper';
-import {View, ImageSourcePropType, ImageStyle, ViewStyle} from 'react-native';
+import {
+  View,
+  ImageSourcePropType,
+  ImageStyle,
+  ViewStyle,
+  Text,
+} from 'react-native';
 import ButtonNotifications from '@components/ButtonHeaderComponent/ButtonNotifications';
 
 interface IHeaderComponentProps {
@@ -69,7 +75,11 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
             buttonStyle={buttonLeftStyle}
           />
         )}
-
+        {title && (
+          <View>
+            <Text style={styles.textTitle}>{title}</Text>
+          </View>
+        )}
         {isButtonRight && headerRight && (
           <ButtonHeaderComponent
             imgIcon={

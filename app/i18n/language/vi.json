@@ -2,6 +2,7 @@
   "GENERAL":{
     "NOTIFICATIONS":"Thông báo"
   },
+  "GO_BACK":"Trở về",
   "COMPLETED_KYC": "Hoàn tất KYC",
   "DESC_COMPLETED_KYC":"Để bắt đầu mua, bán, giao dịch tài sản số trên MoEx",
   "UTILITIES":"Tiện ích",
@@ -9,5 +10,11 @@
   "SIGNAL":"Tín hiệu",
   "VIEW_ALL":"Xem tất cả",
   "INVESTMENT_HANDBOOK":"Cẩm nang đầu tư",
-  "TOP_MOVERS":"Biến động mạnh"
+  "TOP_MOVERS":"Biến động mạnh",
+  "COMING_SOON":"COMING SOON",
+  "HOME":"Home",
+  "MARKET":"Thị trường",
+  "NOTIFY":"Thông báo",
+  "EXCHANGE":"Giao dịch",
+  "WALLET":"Ví"
 }

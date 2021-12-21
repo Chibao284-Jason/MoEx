@@ -1,3 +1,4 @@
+import { TextStyle } from "react-native";
 
 const scale = (size: number, fontSize?: number) => {
   if (fontSize) {
@@ -16,5 +17,9 @@ export const variableGlobal = {
   paddingLeftCard: 15,
   marginVerticalCard: 25,
   fontSizeGlobal: 14,
-  borderRadiusCard: 8
+  borderRadiusCard: 8,
+  borderRadiusButton: 20,
+  fontSizeUpperCase: 18,
+  fontSizeHeader: 18,
+  fontWeightHeader: "600" as TextStyle['fontWeight'],
 }

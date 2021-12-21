@@ -4,15 +4,18 @@ import {useTheme} from 'react-native-paper';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {style} from './styles';
 import {useTranslation} from 'react-i18next';
-interface SignalItemProps {}
+interface SignalItemProps {
+  onPressSignal?: () => void;
+}
 
 const SignalItem = (props: SignalItemProps) => {
+  const {onPressSignal} = props;
   const {colors} = useTheme();
   const {t} = useTranslation();
   const styles = style(colors as ThemeColors);
   return (
     <View style={styles.containerBody}>
-      <TouchableOpacity style={styles.viewCard}>
+      <TouchableOpacity style={styles.viewCard} onPress={onPressSignal}>
         <View style={{width: '20%', alignItems: 'center'}}>
           <AutoHeightImage
             source={{

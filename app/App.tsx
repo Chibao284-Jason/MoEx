@@ -13,7 +13,7 @@ import {
   CombinedDefaultTheme,
   CombinedDarkTheme,
 } from '@config';
-import Navigator from '@navigation/index';
+import {NavigationStack as Navigator} from '@navigation';
 import configureStore from './store';
 import {IThemeState} from '@models/reducers/theme';
 import './i18n/i18n';

@@ -1,2 +1,5 @@
 import NavigationStack from './NavigationStack';
-export default NavigationStack;
+import {screenName} from './screenName';
+
+export {screenName, NavigationStack};
+// export default NavigationStack;

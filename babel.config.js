@@ -16,7 +16,7 @@ module.exports = {
           '@components': './app/components/',
           '@screens': './app/screens/',
           '@store': './app/store/',
-          '@navigation': './app/navigation/',
+          '@navigation': './app/navigation',
           '@models': './app/models/',
           '@constants': './app/constants/',
           '@config': './app/config',

@@ -1,4 +1,6 @@
 import TitleComponent from '@components/TitleComponent/TitleComponent';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
 import {View} from 'react-native';
@@ -11,6 +13,7 @@ const CardNewList = (props: CardNewListProps) => {
   const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.viewTitle}>
@@ -23,7 +26,13 @@ const CardNewList = (props: CardNewListProps) => {
       </View>
       <View style={styles.containerBody}>
         {dataExample.map(item => {
-          return <CardNewsItem />;
+          return (
+            <CardNewsItem
+              onPressCardNews={() =>
+                navigation.navigate(screenName.COMING_SOON)
+              }
+            />
+          );
         })}
       </View>
     </View>

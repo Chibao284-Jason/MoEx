@@ -1,4 +1,7 @@
 import TitleComponent from '@components/TitleComponent/TitleComponent';
+import {colorsTheme} from '@config';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
 import {Text, View} from 'react-native';
@@ -16,6 +19,7 @@ const HandBookList = (props: HandBookListProps) => {
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const {t} = useTranslation();
+  const navigation = useNavigation();
   return (
     <View style={styles.containerList}>
       <View style={styles.viewTitle}>
@@ -28,7 +32,9 @@ const HandBookList = (props: HandBookListProps) => {
       </View>
       <LinearGradient
         colors={
-          !isDark ? ['#FFFFFF', '#F4F4F6', '#F5F5F7'] : ['#131522', '#131522']
+          !isDark
+            ? ['#FFFFFF', '#F4F4F6', '#F5F5F7']
+            : [colorsTheme.blue_black, colorsTheme.blue_black]
         }
         start={{x: 0, y: 0}}
         end={{x: 0, y: 1}}>
@@ -38,7 +44,14 @@ const HandBookList = (props: HandBookListProps) => {
           style={styles.containerBody}
           data={dataExample}
           renderItem={item => {
-            return <HandBookCard isDark={isDark} />;
+            return (
+              <HandBookCard
+                isDark={isDark}
+                onPressHandBook={() =>
+                  navigation.navigate(screenName.COMING_SOON)
+                }
+              />
+            );
           }}
         />
       </LinearGradient>

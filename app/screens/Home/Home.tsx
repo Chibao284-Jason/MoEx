@@ -12,12 +12,15 @@ import TopMoversList from '@components/TopMoversComponent/TopMoversList';
 import SignalList from '@components/SignalComponent/SignalList';
 import HandBookList from '@components/HandBookCardComponent/HandBookList';
 import CardNewsList from '@components/CardNewsComponent.tsx/CardNewsList';
+import {useNavigation} from '@react-navigation/native';
+import {screenName} from '@navigation';
 interface HomeScreenProps {}
 interface IState {
   themeReducer: IThemeState;
 }
 const Home = (props: HomeScreenProps) => {
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
+  const navigation = useNavigation();
   return (
     <View>
       <ThemeController />
@@ -39,7 +42,10 @@ const Home = (props: HomeScreenProps) => {
         }
       />
       <LineLarge />
-      <TouchableVerify isDark={isDark} />
+      <TouchableVerify
+        isDark={isDark}
+        onPressVerify={() => navigation.navigate(screenName.COMING_SOON)}
+      />
       <LineLarge />
       <WalletVoucher />
       <UtilitiesComponent isDark={isDark} />

@@ -89,7 +89,8 @@ export const colors = {
   athensGray: '#F9F9FB',
   linkWater: '#EEF2FA',
   ebonyClay: '#222639',
-  portage: '#8B82EF'
+  portage: '#8B82EF',
+  mirageB: "#191B2B"
 };
 
 export const colorDefaultTheme: ThemeColors = {
@@ -99,6 +100,7 @@ export const colorDefaultTheme: ThemeColors = {
   line: colors.whisper,
   backgroundItem: colors.white,
   backgroundCardSignal: colors.white,
+  backgroundButton: colors.persianBlue,
 
   //COLOR BORDER
   borderColorCard: colors.linkWater,
@@ -112,17 +114,21 @@ export const colorDefaultTheme: ThemeColors = {
   textSignalStatus: colors.white,
   textViewAll: colors.persianBlue,
   textCard: colors.tangaroa,
+  textColorButton: colors.white,
+  textHeader: colors.black
 }
 export const colorDarkTheme: ThemeColors = {
   ...colorDefaultTheme,
 
   //COLORS VIEW DARK 
-  backgroundGlobal: colors.vulcan,
+  // backgroundGlobal: colors.vulcan,
+  backgroundGlobal: colors.blue_black,
   // backgroundCard: colors.blue_black,
   backgroundCard: colors.blue_black,
   line: colors.mirage,
   backgroundItem: colors.mirage,
   backgroundCardSignal: colors.ebonyClay,
+  backgroundButton: colors.persianBlue,
 
   //COLOR BORDER
   borderColorCard: colors.transparent,
@@ -135,6 +141,7 @@ export const colorDarkTheme: ThemeColors = {
   textSignalStatus: colors.white,
   textViewAll: colors.portage,
   textCard: colors.geyser,
-
+  textColorButton: colors.white,
+  textHeader: colors.white
 
 }
