@@ -122,7 +122,7 @@ export const BottomTabs = () => {
                   !focused
                     ? require('../assets/img/exchangeInactive.png')
                     : isDark
-                    ? require('../assets/img/exchangeDark.png')
+                    ? require('../assets/img/exchangeDarkMenu.png')
                     : require('../assets/img/exchange.png')
                 }
               />

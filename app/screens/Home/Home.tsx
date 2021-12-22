@@ -34,7 +34,7 @@ const Home = (props: HomeScreenProps) => {
         iconLeftStyle={{width: 30, height: 30}}
         headerLeft={() => console.log('')}
         isNotify={true}
-        onPressNotify={() => console.log('Click notify')}
+        onPressNotify={() => navigation.navigate(screenName.NOTIFICATIONS)}
         iconNotify={
           !isDark
             ? require('../../assets/img/bellIcon.png')

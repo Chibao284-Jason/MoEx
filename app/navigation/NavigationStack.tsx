@@ -19,6 +19,7 @@ import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
 import {screenName} from './screenName';
 import {BottomTabs} from './BottomTabs';
 import SignalScreen from '@screens/Signal';
+import NotifyScreen from '@screens/Notify';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -73,12 +74,6 @@ const AuthNavigator = () => {
 
 const LoggedInNavigator = () => (
   <LoggedInStack.Navigator>
-    {/* <Stack.Screen
-      name={screenName.HOME}
-      component={HomeScreen}
-      options={homeOptions}
-    />
-     */}
     <Stack.Screen
       name={'BottomTab'}
       component={BottomTabs}
@@ -92,6 +87,11 @@ const LoggedInNavigator = () => (
     <Stack.Screen
       name={screenName.SIGNAL}
       component={SignalScreen}
+      options={homeOptions}
+    />
+    <Stack.Screen
+      name={screenName.NOTIFICATIONS}
+      component={NotifyScreen}
       options={homeOptions}
     />
   </LoggedInStack.Navigator>
