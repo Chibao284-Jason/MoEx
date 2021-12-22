@@ -32,6 +32,7 @@ interface IHeaderComponentProps {
   lineHeader?: boolean;
   isNotify?: boolean;
   iconNotify?: ImageSourcePropType;
+  customButtonRight?: Element;
 }
 
 const HeaderComponent = (props: IHeaderComponentProps) => {
@@ -55,6 +56,7 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
     isNotify,
     onPressNotify,
     iconNotify,
+    customButtonRight,
   } = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
@@ -110,6 +112,7 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
             label={labelRight}
           />
         )}
+        {customButtonRight}
       </View>
       <View style={styles.line(lineHeader)} />
     </View>

@@ -14,6 +14,7 @@ export const variableGlobal = {
   marginBottomCard: 5,
   marginBottomTitle: 20,
   marginRightCard: 15,
+  marginLeftCard: 15,
   paddingLeftCard: 15,
   marginVerticalCard: 25,
   fontSizeGlobal: 14,

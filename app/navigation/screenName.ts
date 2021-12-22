@@ -6,5 +6,7 @@ export const screenName = {
   NOTIFICATIONS: "Notifications",
   EXCHANGE: "Exchange",
   WALLET: "Wallet",
-  SIGNAL: "Signal"
+  SIGNAL: "Signal",
+  MENU: 'Menu',
+  BOTTOM_TABS: 'Bottom Tabs'
 }

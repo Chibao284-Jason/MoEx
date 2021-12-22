@@ -27,4 +27,8 @@ interface ThemeColors {
   textColorButton: string
   backgroundButton: string
   textHeader: string
+  textTitleMenu: string
+  labelButtonColor: string
+  backgroundLogOutButton: string
+
 }

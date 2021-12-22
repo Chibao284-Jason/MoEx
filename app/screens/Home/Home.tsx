@@ -1,8 +1,7 @@
 import React from 'react';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
 import TouchableVerify from '@components/VerifyAccountComponent/TouchableVerify';
-import ThemeController from '@components/ThemeController';
 import {useSelector} from 'react-redux';
 import {IThemeState} from '@models/reducers/theme';
 import {LineLarge} from '@components/LineComponent/LineLarge';
@@ -23,7 +22,6 @@ const Home = (props: HomeScreenProps) => {
   const navigation = useNavigation();
   return (
     <View>
-      <ThemeController />
       <HeaderComponent
         isButtonLeft={true}
         iconLeft={
@@ -32,7 +30,7 @@ const Home = (props: HomeScreenProps) => {
             : require('../../assets/img/menuIconWhite.png')
         }
         iconLeftStyle={{width: 30, height: 30}}
-        headerLeft={() => console.log('')}
+        headerLeft={() => navigation.navigate(screenName.MENU)}
         isNotify={true}
         onPressNotify={() => navigation.navigate(screenName.NOTIFICATIONS)}
         iconNotify={
@@ -41,18 +39,21 @@ const Home = (props: HomeScreenProps) => {
             : require('../../assets/img/bellIconWhite.png')
         }
       />
-      <LineLarge />
-      <TouchableVerify
-        isDark={isDark}
-        onPressVerify={() => navigation.navigate(screenName.COMING_SOON)}
-      />
-      <LineLarge />
-      <WalletVoucher />
-      <UtilitiesComponent isDark={isDark} />
-      <TopMoversList isDark={isDark} />
-      <SignalList />
-      <HandBookList isDark={isDark} />
-      <CardNewsList />
+      <ScrollView>
+        <LineLarge />
+        <TouchableVerify
+          isDark={isDark}
+          onPressVerify={() => navigation.navigate(screenName.COMING_SOON)}
+        />
+
+        <LineLarge />
+        <WalletVoucher />
+        <UtilitiesComponent isDark={isDark} />
+        <TopMoversList isDark={isDark} />
+        <SignalList />
+        <HandBookList isDark={isDark} />
+        <CardNewsList />
+      </ScrollView>
     </View>
   );
 };

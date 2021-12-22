@@ -6,6 +6,7 @@ interface TitleComponentProps {
   isSubtitle?: boolean;
   title: string;
   subTitle?: string;
+  titleStyles?: TextStyle;
   subTitleStyle?: TextStyle;
   onPressSubTitle?: () => void;
 }
@@ -13,11 +14,18 @@ interface TitleComponentProps {
 const TitleComponent = (props: TitleComponentProps) => {
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
-  const {isSubtitle, title, subTitle, subTitleStyle, onPressSubTitle} = props;
+  const {
+    isSubtitle,
+    title,
+    subTitle,
+    subTitleStyle,
+    onPressSubTitle,
+    titleStyles,
+  } = props;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textTitle}>{title}</Text>
+      <Text style={[styles.textTitle, titleStyles]}>{title}</Text>
       {isSubtitle && (
         <TouchableOpacity onPress={onPressSubTitle}>
           <Text style={subTitleStyle}>{subTitle}</Text>

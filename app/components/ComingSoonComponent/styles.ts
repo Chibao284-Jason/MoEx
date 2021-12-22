@@ -38,7 +38,8 @@ export const style = (colors: ThemeColors): Styles => ({
   },
   textGoBack: {
     marginLeft: 5,
-    color: colors.textColorButton
+    color: colors.textColorButton,
+    fontWeight: variableGlobal.fontWeightHeader
   }
 
 })

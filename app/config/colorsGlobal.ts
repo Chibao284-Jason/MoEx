@@ -90,7 +90,9 @@ export const colors = {
   linkWater: '#EEF2FA',
   ebonyClay: '#222639',
   portage: '#8B82EF',
-  mirageB: "#191B2B"
+  mirageB: "#191B2B",
+  ghost: '#C8C7D6',
+  scarpaFlow: '#555459'
 };
 
 export const colorDefaultTheme: ThemeColors = {
@@ -101,6 +103,7 @@ export const colorDefaultTheme: ThemeColors = {
   backgroundItem: colors.white,
   backgroundCardSignal: colors.white,
   backgroundButton: colors.persianBlue,
+  backgroundLogOutButton: colors.whisper,
 
   //COLOR BORDER
   borderColorCard: colors.linkWater,
@@ -115,7 +118,9 @@ export const colorDefaultTheme: ThemeColors = {
   textViewAll: colors.persianBlue,
   textCard: colors.tangaroa,
   textColorButton: colors.white,
-  textHeader: colors.black
+  textHeader: colors.black,
+  textTitleMenu: colors.manatee,
+  labelButtonColor: colors.scarpaFlow,
 }
 export const colorDarkTheme: ThemeColors = {
   ...colorDefaultTheme,
@@ -129,6 +134,7 @@ export const colorDarkTheme: ThemeColors = {
   backgroundItem: colors.mirage,
   backgroundCardSignal: colors.ebonyClay,
   backgroundButton: colors.persianBlue,
+  backgroundLogOutButton: colors.mirageB,
 
   //COLOR BORDER
   borderColorCard: colors.transparent,
@@ -142,6 +148,8 @@ export const colorDarkTheme: ThemeColors = {
   textViewAll: colors.portage,
   textCard: colors.geyser,
   textColorButton: colors.white,
-  textHeader: colors.white
+  textHeader: colors.white,
+  textTitleMenu: colors.ghost,
+  labelButtonColor: colors.manatee
 
 }

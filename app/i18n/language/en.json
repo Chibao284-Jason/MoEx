@@ -15,5 +15,27 @@
   "MARKET":"Market",
   "NOTIFY":"Notify",
   "EXCHANGE":"Exchange",
-  "WALLET":"Wallet"
+  "WALLET":"Wallet",
+  "PRESENTER":"Presenter",
+  "ADD_PRESENTER":"Add referrer",
+  "ACCOUNT":"ACCOUNT",
+  "PROFILE":"Profile",
+  "CHANGE_PASSWORD":"Change password",
+  "PAYMENT_METHODS":"Payment methods",
+  "ACCOUNT_VERIFICATIONS":"Account Verification",
+  "THEME":"Theme",
+  "BASE_COIN":"Base currency",
+  "SECURITY":"SECURITY",
+  "VERIFY_ID":"TouchID / FaceID",
+  "AUTHENTICATION":"Two-factor Authentication",
+  "DEVICES_MANAGEMENT":"Devices management",
+  "REFERRAL":"Referral",
+  "PARTNER":"Partner",
+  "ABOUT_US":"About us",
+  "FAQ":"FAQs",
+  "CREATE_TICKET":"Create a support ticket",
+  "HOTLINE":"Hotline",
+  "COMMUNITY":"Community",
+  "LANGUAGE":"Language"
+  
 }

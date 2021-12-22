@@ -17,9 +17,8 @@ const ComingSoon = (props: ComingSoonProps) => {
     <View style={styles.container}>
       {/* <ThemeController /> */}
       <AutoHeightImage
-        width={250}
-        source={require('../../assets/img/imgComingSoon.png')}
-        // source={require('../../assets/img/svgVerify.png')}
+        width={300}
+        source={require('../../assets/img/comingSoon.png')}
       />
       <Text style={styles.textComing}>{t('COMING_SOON')}</Text>
       <View style={styles.viewBack}>

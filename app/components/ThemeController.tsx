@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Switch} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useDispatch, useSelector} from 'react-redux';
-import {Switch} from 'react-native-paper';
 import * as themeActions from 'app/store/actions/themeActions';
 import {IThemeState} from 'app/models/reducers/theme';
 import {changeLanguage} from '@store/actions/changeLanguageActions';
@@ -33,12 +32,11 @@ const ThemeController: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    margin: 12,
   },
-  icon: {marginLeft: 4},
+  icon: {marginRight: 4},
 });
 
 export default ThemeController;

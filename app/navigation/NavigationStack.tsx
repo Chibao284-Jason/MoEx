@@ -7,11 +7,8 @@ import {
 import {useSelector} from 'react-redux';
 
 import {navigationRef} from './NavigationService';
-
 import Login from 'app/screens/Login';
-import HomeScreen from '@screens/Home';
 import ForgotPassword from 'app/screens/ForgotPassword';
-
 import ThemeController from '../components/ThemeController';
 import {StatusBar} from 'react-native';
 import {ILoginState} from 'app/models/reducers/login';
@@ -20,6 +17,7 @@ import {screenName} from './screenName';
 import {BottomTabs} from './BottomTabs';
 import SignalScreen from '@screens/Signal';
 import NotifyScreen from '@screens/Notify';
+import MenuScreen from '@screens/Menu';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -75,7 +73,7 @@ const AuthNavigator = () => {
 const LoggedInNavigator = () => (
   <LoggedInStack.Navigator>
     <Stack.Screen
-      name={'BottomTab'}
+      name={screenName.BOTTOM_TABS}
       component={BottomTabs}
       options={homeOptions}
     />
@@ -93,6 +91,15 @@ const LoggedInNavigator = () => (
       name={screenName.NOTIFICATIONS}
       component={NotifyScreen}
       options={homeOptions}
+    />
+    <Stack.Screen
+      name={screenName.MENU}
+      component={MenuScreen}
+      options={{
+        ...homeOptions,
+        gestureDirection: 'horizontal-inverted',
+        gestureEnabled: true, // If you want to swipe back like iOS on Android
+      }}
     />
   </LoggedInStack.Navigator>
 );
