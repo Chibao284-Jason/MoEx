@@ -11,10 +11,12 @@ import ThemeController from '@components/ThemeController';
 import {LineLarge} from '@components/LineComponent/LineLarge';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {colorsTheme} from '@config';
+import ModalTopToCenter from '@components/ModalComponent/Modal';
 interface MenuListProps {}
 
 const MenuList = (props: MenuListProps) => {
   const [switchOn, setSwitch] = useState(false);
+  const [isShowModal, setIsShowModal] = useState(false);
   const {colors} = useTheme();
   const {t} = useTranslation();
   const styles = style(colors as ThemeColors);
@@ -117,6 +119,7 @@ const MenuList = (props: MenuListProps) => {
             width={25}
           />
         }
+        onPressMenuButton={() => setIsShowModal(!isShowModal)}
       />
       <View style={styles.viewLogOut}>
         <TouchableOpacity style={styles.buttonLogOut}>
@@ -126,6 +129,10 @@ const MenuList = (props: MenuListProps) => {
           Version v1.0.2 - copyright SOC 2021
         </Text>
       </View>
+      <ModalTopToCenter
+        isShowModal={isShowModal}
+        onCloseModal={() => setIsShowModal(!isShowModal)}
+      />
     </SafeAreaView>
   );
 };

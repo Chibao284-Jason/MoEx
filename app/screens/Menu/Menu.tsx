@@ -6,6 +6,7 @@ import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
 import {useSelector} from 'react-redux';
 import {IThemeState} from '@models/reducers/theme';
 import {useNavigation} from '@react-navigation/native';
+import ModalTopToCenter from '@components/ModalComponent/Modal';
 
 interface MenuProps {}
 interface IState {
