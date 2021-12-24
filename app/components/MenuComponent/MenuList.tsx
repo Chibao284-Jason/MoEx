@@ -10,6 +10,7 @@ import MenuButton from './MenuButton';
 import ThemeController from '@components/ThemeController';
 import {LineLarge} from '@components/LineComponent/LineLarge';
 import AutoHeightImage from 'react-native-auto-height-image';
+import {colorsTheme} from '@config';
 interface MenuListProps {}
 
 const MenuList = (props: MenuListProps) => {
@@ -56,7 +57,14 @@ const MenuList = (props: MenuListProps) => {
       <MenuButton
         label={t('VERIFY_ID')}
         iconRight={
-          <Switch value={switchOn} onChange={() => onPressAuthentication()} />
+          <Switch
+            value={switchOn}
+            onChange={() => onPressAuthentication()}
+            trackColor={{
+              false: colorsTheme.manatee,
+              true: colorsTheme.persianBlue,
+            }}
+          />
         }
         iconLeft={require('../../assets/img/faceID.png')}
         isIconRight={false}

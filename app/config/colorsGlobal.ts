@@ -88,11 +88,17 @@ export const colors = {
   mountainMeadow: '#12B886',
   athensGray: '#F9F9FB',
   linkWater: '#EEF2FA',
-  ebonyClay: '#222639',
+  ebonyClay: '#1F2131',
+  ebonyClay2: '#2A283F',
   portage: '#8B82EF',
   mirageB: "#191B2B",
   ghost: '#C8C7D6',
-  scarpaFlow: '#555459'
+  scarpaFlow: '#555459',
+  blackSqueeze: '#F5F9FC',
+  dullLavender: '#9D92E1',
+  arapawa: '#1D0E6B',
+  cornflowerBlue: '#7658FF',
+  royalBlue: '#5547F4'
 };
 
 export const colorDefaultTheme: ThemeColors = {
@@ -104,6 +110,10 @@ export const colorDefaultTheme: ThemeColors = {
   backgroundCardSignal: colors.white,
   backgroundButton: colors.persianBlue,
   backgroundLogOutButton: colors.whisper,
+  backgroundSwapButton: colors.dullLavender,
+  backgroundButtonCard: colors.whisper,
+  backgroundExchange: colors.blackSqueeze,
+  backgroundWallet: colors.arapawa,
 
   //COLOR BORDER
   borderColorCard: colors.linkWater,
@@ -121,6 +131,9 @@ export const colorDefaultTheme: ThemeColors = {
   textHeader: colors.black,
   textTitleMenu: colors.manatee,
   labelButtonColor: colors.scarpaFlow,
+  labelSwap: colors.white,
+  buttonWallet: colors.cornflowerBlue,
+
 }
 export const colorDarkTheme: ThemeColors = {
   ...colorDefaultTheme,
@@ -135,6 +148,10 @@ export const colorDarkTheme: ThemeColors = {
   backgroundCardSignal: colors.ebonyClay,
   backgroundButton: colors.persianBlue,
   backgroundLogOutButton: colors.mirageB,
+  backgroundSwapButton: colors.ebonyClay2,
+  backgroundButtonCard: colors.mirageB,
+  backgroundExchange: colors.vulcan,
+  backgroundWallet: colors.vulcan,
 
   //COLOR BORDER
   borderColorCard: colors.transparent,
@@ -150,6 +167,8 @@ export const colorDarkTheme: ThemeColors = {
   textColorButton: colors.white,
   textHeader: colors.white,
   textTitleMenu: colors.ghost,
-  labelButtonColor: colors.manatee
+  labelButtonColor: colors.manatee,
+  labelSwap: colors.geyser,
+  buttonWallet: colors.royalBlue,
 
 }

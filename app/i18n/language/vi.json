@@ -37,5 +37,13 @@
   "CREATE_TICKET":"Tạo yêu cầu hổ trợ mới",
   "HOTLINE":"Hotline",
   "COMMUNITY":"Mạng xã hội",
-  "LANGUAGE":"Ngôn ngữ"
+  "LANGUAGE":"Ngôn ngữ",
+  "DEPOSIT":"Nạp",
+  "WITHDRAW":"Rút",
+  "WALLET_LIST":"Danh sách ví",
+  "HISTORY":"Lịch sử",
+  "SPOT_WALLET":"Ví Spot",
+  "BROKER_WALLET":"Ví Broker",
+  "EARN_WALLET":"Ví Earn",
+  "MEMBERSHIP_WALLET":"Ví Membership"
 }

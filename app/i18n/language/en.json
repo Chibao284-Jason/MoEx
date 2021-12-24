@@ -36,6 +36,15 @@
   "CREATE_TICKET":"Create a support ticket",
   "HOTLINE":"Hotline",
   "COMMUNITY":"Community",
-  "LANGUAGE":"Language"
+  "LANGUAGE":"Language",
+  "DEPOSIT":"Deposit",
+  "WITHDRAW":"Withdraw",
+  "WALLET_LIST":"List of wallets",
+  "HISTORY":"History",
+  "SPOT_WALLET":"Spot wallet",
+  "BROKER_WALLET":"Broker wallet",
+  "EARN_WALLET":"Earn wallet",
+  "MEMBERSHIP_WALLET":"Membership wallet"
+
   
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import {useTheme} from 'react-native-paper';
 import {style} from './styles';
 interface CardIntroduceProps {}
@@ -22,7 +22,3 @@ const CardIntroduce = (props: CardIntroduceProps) => {
 };
 
 export default CardIntroduce;
-
-const styles = StyleSheet.create({
-  container: {},
-});

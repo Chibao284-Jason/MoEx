@@ -13,6 +13,8 @@ import AutoHeightImage from 'react-native-auto-height-image';
 import {useSelector} from 'react-redux';
 import {IThemeState} from '@models/reducers/theme';
 import {colorsTheme} from '@config';
+import WalletScreen from '@screens/Wallet';
+import ExchangeScreen from '@screens/Exchange';
 const Tab = createBottomTabNavigator();
 
 interface IState {
@@ -111,7 +113,7 @@ export const BottomTabs = () => {
       />
       <Tab.Screen
         name={screenName.EXCHANGE}
-        component={ComingSoon}
+        component={ExchangeScreen}
         options={{
           tabBarLabel: t('EXCHANGE'),
           tabBarIcon: ({focused}) => (
@@ -132,7 +134,7 @@ export const BottomTabs = () => {
       />
       <Tab.Screen
         name={screenName.WALLET}
-        component={ComingSoon}
+        component={WalletScreen}
         options={{
           tabBarLabel: t('WALLET'),
           tabBarIcon: ({focused}) => (

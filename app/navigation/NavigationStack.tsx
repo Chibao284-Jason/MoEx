@@ -5,7 +5,6 @@ import {
   StackNavigationOptions,
 } from '@react-navigation/stack';
 import {useSelector} from 'react-redux';
-
 import {navigationRef} from './NavigationService';
 import Login from 'app/screens/Login';
 import ForgotPassword from 'app/screens/ForgotPassword';
@@ -18,6 +17,8 @@ import {BottomTabs} from './BottomTabs';
 import SignalScreen from '@screens/Signal';
 import NotifyScreen from '@screens/Notify';
 import MenuScreen from '@screens/Menu';
+import ExchangeScreen from '@screens/Exchange';
+import WalletScreen from '@screens/Wallet';
 
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -83,6 +84,11 @@ const LoggedInNavigator = () => (
       options={homeOptions}
     />
     <Stack.Screen
+      name={'screenName.COMING_SOON'}
+      component={WalletScreen}
+      options={homeOptions}
+    />
+    <Stack.Screen
       name={screenName.SIGNAL}
       component={SignalScreen}
       options={homeOptions}
@@ -90,6 +96,11 @@ const LoggedInNavigator = () => (
     <Stack.Screen
       name={screenName.NOTIFICATIONS}
       component={NotifyScreen}
+      options={homeOptions}
+    />
+    <Stack.Screen
+      name={screenName.EXCHANGE}
+      component={ExchangeScreen}
       options={homeOptions}
     />
     <Stack.Screen

@@ -30,5 +30,11 @@ interface ThemeColors {
   textTitleMenu: string
   labelButtonColor: string
   backgroundLogOutButton: string
+  backgroundButtonCard: string
+  backgroundExchange: string
+  backgroundSwapButton: string
+  labelSwap: string
+  backgroundWallet: string
+  buttonWallet: string
 
 }

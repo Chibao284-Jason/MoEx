@@ -7,6 +7,7 @@ import {IThemeState} from 'app/models/reducers/theme';
 import {changeLanguage} from '@store/actions/changeLanguageActions';
 import i18n from 'app/i18n/i18n';
 import {useTranslation} from 'react-i18next';
+import {colorsTheme} from '@config';
 interface IState {
   themeReducer: IThemeState;
 }
@@ -24,7 +25,11 @@ const ThemeController: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Switch value={isDark} onValueChange={onToggleTheme} />
+      <Switch
+        value={isDark}
+        onValueChange={onToggleTheme}
+        trackColor={{false: colorsTheme.manatee, true: colorsTheme.persianBlue}}
+      />
       <Icon name={iconName} size={20} style={styles.icon} color={iconColor} />
     </View>
   );
