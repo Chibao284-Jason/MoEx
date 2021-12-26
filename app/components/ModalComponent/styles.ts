@@ -42,7 +42,7 @@ export const style = (colors: ThemeColors): Styles => ({
   },
   button: {
     elevation: 2,
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: colorsTheme.whisper,
