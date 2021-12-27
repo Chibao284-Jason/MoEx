@@ -10,6 +10,7 @@ i18n
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
+    compatibilityJSON: 'v3',
   });
 
 export default i18n;
