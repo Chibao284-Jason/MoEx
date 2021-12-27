@@ -19,12 +19,9 @@ import NotifyScreen from '@screens/Notify';
 import MenuScreen from '@screens/Menu';
 import ExchangeScreen from '@screens/Exchange';
 import WalletScreen from '@screens/Wallet';
-import Temp from '@screens/Temp';
-
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const LoggedInStack = createStackNavigator();
-
 const homeOptions: StackNavigationOptions = {
   // title: 'Home',
   // headerTitleStyle: {
@@ -73,7 +70,7 @@ const AuthNavigator = () => {
 };
 
 const LoggedInNavigator = () => (
-  <LoggedInStack.Navigator initialRouteName="screenName.temp">
+  <LoggedInStack.Navigator>
     <Stack.Screen
       name={screenName.BOTTOM_TABS}
       component={BottomTabs}
@@ -82,11 +79,6 @@ const LoggedInNavigator = () => (
     <Stack.Screen
       name={screenName.COMING_SOON}
       component={ComingSoon}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={'screenName.temp'}
-      component={Temp}
       options={homeOptions}
     />
     <Stack.Screen
@@ -131,7 +123,7 @@ const App: React.FC<IProps> = (props: IProps) => {
     <NavigationContainer ref={navigationRef} theme={theme}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
 
-      <Stack.Navigator headerMode="none">
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         {isLoggedIn ? (
           <Stack.Screen
             name="Home"

@@ -20,15 +20,16 @@ const Voucher = (props: IVoucherProps) => {
       showsHorizontalScrollIndicator={false}
       pagingEnabled
       contentContainerStyle={{paddingHorizontal: 10}}
+      keyExtractor={item => item.toString()}
       renderItem={({item}) => {
         return (
           <TouchableOpacity
             style={{margin: 5}}
-            onPress={() => navigation.navigate(screenName.COMING_SOON)}>
+            onPress={() =>
+              navigation.navigate(screenName.COMING_SOON as never)
+            }>
             <AutoHeightImage
-              source={{
-                uri: 'https://blog.attlas.io/wp-content/uploads/2021/08/Attlas_REVV-token-listing-Attlas-07-1024x642.jpg',
-              }}
+              source={require('../../assets/img/voucherExample.jpeg')}
               width={250}
               style={{borderRadius: 8}}
             />

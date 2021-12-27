@@ -30,9 +30,11 @@ const Home = (props: HomeScreenProps) => {
             : require('../../assets/img/menuIconWhite.png')
         }
         iconLeftStyle={{width: 30, height: 30}}
-        headerLeft={() => navigation.navigate(screenName.MENU)}
+        headerLeft={() => navigation.navigate(screenName.MENU as never)}
         isNotify={true}
-        onPressNotify={() => navigation.navigate(screenName.NOTIFICATIONS)}
+        onPressNotify={() =>
+          navigation.navigate(screenName.NOTIFICATIONS as never)
+        }
         iconNotify={
           !isDark
             ? require('../../assets/img/bellIcon.png')
@@ -43,7 +45,9 @@ const Home = (props: HomeScreenProps) => {
         <LineLarge />
         <TouchableVerify
           isDark={isDark}
-          onPressVerify={() => navigation.navigate(screenName.COMING_SOON)}
+          onPressVerify={() =>
+            navigation.navigate(screenName.COMING_SOON as never)
+          }
         />
 
         <LineLarge />

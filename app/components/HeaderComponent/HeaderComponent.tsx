@@ -33,6 +33,7 @@ interface IHeaderComponentProps {
   isNotify?: boolean;
   iconNotify?: ImageSourcePropType;
   customButtonRight?: Element;
+  customButtonLeft?: Element;
 }
 
 const HeaderComponent = (props: IHeaderComponentProps) => {
@@ -57,12 +58,14 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
     onPressNotify,
     iconNotify,
     customButtonRight,
+    customButtonLeft,
   } = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   return (
     <View style={[styles.viewHeader, styleHeader]}>
       <View style={styles.viewContainer}>
+        {customButtonLeft}
         {isButtonLeft && headerLeft && (
           <ButtonHeaderComponent
             imgIcon={

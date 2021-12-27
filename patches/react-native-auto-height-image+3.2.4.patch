@@ -1,0 +1,27 @@
+diff --git a/node_modules/react-native-auto-height-image/index.d.ts b/node_modules/react-native-auto-height-image/index.d.ts
+index cbcaa8f..0f7a2a5 100644
+--- a/node_modules/react-native-auto-height-image/index.d.ts
++++ b/node_modules/react-native-auto-height-image/index.d.ts
+@@ -1,12 +1,12 @@
+ import * as React from 'react';
+-import { ImageProps } from 'react-native';
++import { ImageProps, ImageSourcePropType } from 'react-native';
+ 
+ interface TSource {
+   uri: string;
+ }
+ 
+ export interface AutoHeightImageProps extends ImageProps {
+-  source: number | TSource;
++  source: number | TSource | ImageSourcePropType;
+   width: number;
+   maxHeight?: number;
+   fallbackSource?: number | TSource;
+@@ -17,6 +17,6 @@ export interface AutoHeightImageProps extends ImageProps {
+ declare class AutoHeightImage extends React.Component<
+   AutoHeightImageProps,
+   any
+-> {}
++> { }
+ 
+ export default AutoHeightImage;

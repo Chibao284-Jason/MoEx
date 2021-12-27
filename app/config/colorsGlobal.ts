@@ -114,6 +114,7 @@ export const colorDefaultTheme: ThemeColors = {
   backgroundButtonCard: colors.whisper,
   backgroundExchange: colors.blackSqueeze,
   backgroundWallet: colors.arapawa,
+  focusTopTab: colors.persianBlue,
 
   //COLOR BORDER
   borderColorCard: colors.linkWater,
@@ -133,6 +134,7 @@ export const colorDefaultTheme: ThemeColors = {
   labelButtonColor: colors.scarpaFlow,
   labelSwap: colors.white,
   buttonWallet: colors.cornflowerBlue,
+  textNameCoin: colors.mirageB
 
 }
 export const colorDarkTheme: ThemeColors = {
@@ -152,6 +154,7 @@ export const colorDarkTheme: ThemeColors = {
   backgroundButtonCard: colors.mirageB,
   backgroundExchange: colors.vulcan,
   backgroundWallet: colors.vulcan,
+  focusTopTab: colors.white,
 
   //COLOR BORDER
   borderColorCard: colors.transparent,
@@ -170,5 +173,6 @@ export const colorDarkTheme: ThemeColors = {
   labelButtonColor: colors.manatee,
   labelSwap: colors.geyser,
   buttonWallet: colors.royalBlue,
+  textNameCoin: colors.whisper
 
 }

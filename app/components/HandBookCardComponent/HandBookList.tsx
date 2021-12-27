@@ -42,13 +42,14 @@ const HandBookList = (props: HandBookListProps) => {
           showsHorizontalScrollIndicator={false}
           horizontal
           style={styles.containerBody}
+          keyExtractor={item => item.toString()}
           data={dataExample}
           renderItem={item => {
             return (
               <HandBookCard
                 isDark={isDark}
                 onPressHandBook={() =>
-                  navigation.navigate(screenName.COMING_SOON)
+                  navigation.navigate(screenName.COMING_SOON as never)
                 }
               />
             );

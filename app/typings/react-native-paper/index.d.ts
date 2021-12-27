@@ -36,5 +36,7 @@ interface ThemeColors {
   labelSwap: string
   backgroundWallet: string
   buttonWallet: string
+  textNameCoin: string
+  focusTopTab: string
 
 }

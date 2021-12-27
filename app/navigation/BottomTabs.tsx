@@ -15,8 +15,12 @@ import {IThemeState} from '@models/reducers/theme';
 import {colorsTheme} from '@config';
 import WalletScreen from '@screens/Wallet';
 import ExchangeScreen from '@screens/Exchange';
+// import Temp from '@screens/Temp';
+import {enableScreens} from 'react-native-screens';
+import TopTabMarket from './TopTabMarket';
+import TopTabExchange from './TopTabExchange';
+enableScreens(true);
 const Tab = createBottomTabNavigator();
-
 interface IState {
   themeReducer: IThemeState;
 }
@@ -33,7 +37,9 @@ export const BottomTabs = () => {
     },
   };
   return (
-    <Tab.Navigator screenOptions={homeOptions}>
+    <Tab.Navigator
+      screenOptions={homeOptions}
+      initialRouteName={screenName.EXCHANGE}>
       <Tab.Screen
         name={screenName.HOME}
         component={HomeScreen}
@@ -57,7 +63,7 @@ export const BottomTabs = () => {
       />
       <Tab.Screen
         name={screenName.MARKET}
-        component={() => <View />}
+        component={() => <TopTabMarket />}
         options={{
           tabBarLabel: t('MARKET'),
           tabBarIcon: ({focused}) => (
@@ -99,10 +105,9 @@ export const BottomTabs = () => {
                 },
                 shadowOpacity: 0.3,
                 shadowRadius: 4.65,
-
                 elevation: 8,
               }}
-              onPress={() => navigation.navigate(screenName.SIGNAL)}>
+              onPress={() => navigation.navigate(screenName.SIGNAL as never)}>
               <AutoHeightImage
                 width={30}
                 source={require('../assets/img/bellSignal.png')}
@@ -113,7 +118,8 @@ export const BottomTabs = () => {
       />
       <Tab.Screen
         name={screenName.EXCHANGE}
-        component={ExchangeScreen}
+        // component={ExchangeScreen}
+        component={TopTabExchange}
         options={{
           tabBarLabel: t('EXCHANGE'),
           tabBarIcon: ({focused}) => (

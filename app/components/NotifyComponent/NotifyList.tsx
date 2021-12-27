@@ -9,6 +9,7 @@ const NotifyList = (props: NotifyListProps) => {
   return (
     <View style={styles.container}>
       <FlatList
+        keyExtractor={item => item.toString()}
         data={dataExample}
         renderItem={item => {
           return <NotifyCard />;

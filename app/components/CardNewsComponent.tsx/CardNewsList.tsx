@@ -29,7 +29,7 @@ const CardNewList = (props: CardNewListProps) => {
           return (
             <CardNewsItem
               onPressCardNews={() =>
-                navigation.navigate(screenName.COMING_SOON)
+                navigation.navigate(screenName.COMING_SOON as never)
               }
             />
           );

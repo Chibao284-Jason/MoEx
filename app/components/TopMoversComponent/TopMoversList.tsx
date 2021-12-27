@@ -41,6 +41,7 @@ const TopMoversList = (props: TopMoversListProps) => {
           showsHorizontalScrollIndicator={false}
           style={styles.contentStyle}
           data={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+          keyExtractor={item => item.toString()}
           renderItem={({item}) => {
             return (
               <TopMoversItem
@@ -49,7 +50,7 @@ const TopMoversList = (props: TopMoversListProps) => {
                 price={12.3}
                 symbol="BTC"
                 onPressUtilities={() =>
-                  navigation.navigate(screenName.COMING_SOON)
+                  navigation.navigate(screenName.COMING_SOON as never)
                 }
               />
             );
