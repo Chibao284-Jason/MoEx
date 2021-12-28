@@ -19,6 +19,7 @@ import NotifyScreen from '@screens/Notify';
 import MenuScreen from '@screens/Menu';
 import ExchangeScreen from '@screens/Exchange';
 import WalletScreen from '@screens/Wallet';
+import TradingView from '@components/TradingViewComponent/TradingView';
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const LoggedInStack = createStackNavigator();
@@ -70,7 +71,7 @@ const AuthNavigator = () => {
 };
 
 const LoggedInNavigator = () => (
-  <LoggedInStack.Navigator>
+  <LoggedInStack.Navigator initialRouteName="screenName.trad">
     <Stack.Screen
       name={screenName.BOTTOM_TABS}
       component={BottomTabs}
@@ -84,6 +85,11 @@ const LoggedInNavigator = () => (
     <Stack.Screen
       name={'screenName.COMING_SOON'}
       component={WalletScreen}
+      options={homeOptions}
+    />
+    <Stack.Screen
+      name={'screenName.trad'}
+      component={TradingView}
       options={homeOptions}
     />
     <Stack.Screen
