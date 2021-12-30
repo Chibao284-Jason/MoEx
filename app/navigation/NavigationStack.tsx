@@ -20,15 +20,12 @@ import MenuScreen from '@screens/Menu';
 import ExchangeScreen from '@screens/Exchange';
 import WalletScreen from '@screens/Wallet';
 import TradingView from '@components/TradingViewComponent/TradingView';
+import Presenter from '@components/PresenterComponent/Presenter';
+import ChangePassword from '@components/ChangePasswordComponent/ChangePassword';
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const LoggedInStack = createStackNavigator();
 const homeOptions: StackNavigationOptions = {
-  // title: 'Home',
-  // headerTitleStyle: {
-  //   fontWeight: 'bold',
-  // },
-  // headerRight: () => <ThemeController />,
   headerShown: false,
 };
 
@@ -50,20 +47,14 @@ const AuthNavigator = () => {
         name="Login"
         component={Login}
         options={{
-          // When logging out, a pop animation feels intuitive
-          // You can remove this if you want the default 'push' animation
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-          headerRight: () => <ThemeController />,
         }}
       />
       <Stack.Screen
         name="ForgotPassword"
         component={ForgotPassword}
         options={{
-          // When logging out, a pop animation feels intuitive
-          // You can remove this if you want the default 'push' animation
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-          headerRight: () => <ThemeController />,
         }}
       />
     </AuthStack.Navigator>
@@ -71,47 +62,23 @@ const AuthNavigator = () => {
 };
 
 const LoggedInNavigator = () => (
-  <LoggedInStack.Navigator initialRouteName="screenName.trad">
+  <LoggedInStack.Navigator screenOptions={homeOptions}>
+    <Stack.Screen name={screenName.BOTTOM_TABS} component={BottomTabs} />
+    <Stack.Screen name={screenName.COMING_SOON} component={ComingSoon} />
+    <Stack.Screen name={screenName.REFERRER} component={Presenter} />
+    <Stack.Screen name={'screenName.COMING_SOON'} component={WalletScreen} />
+    <Stack.Screen name={screenName.TRADING_VIEW} component={TradingView} />
+    <Stack.Screen name={screenName.SIGNAL} component={SignalScreen} />
+    <Stack.Screen name={screenName.NOTIFICATIONS} component={NotifyScreen} />
+    <Stack.Screen name={screenName.EXCHANGE} component={ExchangeScreen} />
     <Stack.Screen
-      name={screenName.BOTTOM_TABS}
-      component={BottomTabs}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={screenName.COMING_SOON}
-      component={ComingSoon}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={'screenName.COMING_SOON'}
-      component={WalletScreen}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={'screenName.trad'}
-      component={TradingView}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={screenName.SIGNAL}
-      component={SignalScreen}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={screenName.NOTIFICATIONS}
-      component={NotifyScreen}
-      options={homeOptions}
-    />
-    <Stack.Screen
-      name={screenName.EXCHANGE}
-      component={ExchangeScreen}
-      options={homeOptions}
+      name={screenName.CHANGE_PASSWORD}
+      component={ChangePassword}
     />
     <Stack.Screen
       name={screenName.MENU}
       component={MenuScreen}
       options={{
-        ...homeOptions,
         gestureDirection: 'horizontal-inverted',
         gestureEnabled: true, // If you want to swipe back like iOS on Android
       }}

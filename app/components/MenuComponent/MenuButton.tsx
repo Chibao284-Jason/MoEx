@@ -31,7 +31,7 @@ const MenuButton = (props: MenuButtonProps) => {
         onPressMenuButton
           ? onPressMenuButton
           : () => {
-              navigation.navigate(screenName.COMING_SOON);
+              navigation.navigate(screenName.COMING_SOON as never);
             }
       }>
       <View style={styles.viewIconTitle}>

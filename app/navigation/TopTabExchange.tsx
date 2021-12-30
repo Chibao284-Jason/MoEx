@@ -1,20 +1,9 @@
-import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
-import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
-import Categories from '@components/MarketComponent/Categories';
-import WatchList from '@components/MarketComponent/WatchList';
-import TouchChangeBaseCurrency from '@components/TouchBaseComponent/TouchChangeBaseCurrency';
+import TradingView from '@components/TradingViewComponent/TradingView';
+import {useRoute, RouteProp} from '@react-navigation/native';
 import ExchangeScreen from '@screens/Exchange';
-import MarketScreen from '@screens/Market';
-import * as React from 'react';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  SafeAreaView,
-  Touchable,
-  TouchableOpacity,
-  Text,
-} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {useTranslation} from 'react-i18next';
+import {View, Dimensions, SafeAreaView} from 'react-native';
 import {useTheme} from 'react-native-paper';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {style} from './styles';
@@ -22,13 +11,23 @@ import {style} from './styles';
 const initialLayout = {width: Dimensions.get('window').width};
 
 export default function TopTabExchange() {
+  const route: RouteProp<{params: {key: string}}, 'params'> = useRoute();
+  const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
   const [routes] = React.useState([
-    {key: 'first', title: 'Swap'},
-    {key: 'second', title: 'Spot'},
+    {key: 'Swap', title: `${t('SWAP')}`},
+    {key: 'Spot', title: `${t('SPOT')}`},
   ]);
+  useEffect(() => {
+    console.log('route', route.params);
+    if (route && route.params && route.params.key === 'Spot') {
+      setIndex(1);
+    } else {
+      setIndex(0);
+    }
+  }, [route]);
   const renderTabBar = (props: any) => (
     <View>
       <TabBar
@@ -41,28 +40,12 @@ export default function TopTabExchange() {
   );
 
   const renderScene = SceneMap({
-    first: ExchangeScreen,
-    second: ComingSoon,
+    Swap: ExchangeScreen,
+    Spot: TradingView,
   });
 
   return (
     <SafeAreaView style={styles.containerTopTab}>
-      {/* <HeaderComponent
-        customButtonLeft={
-          <View style={{flexDirection: 'row'}}>
-            <View>
-              <Text
-                style={[styles.labelStyle, {fontSize: 28, fontWeight: '700'}]}>
-                Market
-              </Text>
-            </View>
-            <View style={{justifyContent: 'flex-end', marginBottom: 3}}>
-              <Text style={[styles.subTitleStyle]}>24H</Text>
-            </View>
-          </View>
-        }
-        customButtonRight={<TouchChangeBaseCurrency />}
-      /> */}
       <TabView
         lazyPreloadDistance={300}
         navigationState={{index, routes}}
@@ -74,9 +57,3 @@ export default function TopTabExchange() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  scene: {
-    flex: 1,
-  },
-});

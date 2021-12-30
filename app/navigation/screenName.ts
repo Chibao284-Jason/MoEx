@@ -8,5 +8,8 @@ export const screenName = {
   WALLET: "Wallet",
   SIGNAL: "Signal",
   MENU: 'Menu',
-  BOTTOM_TABS: 'Bottom Tabs'
+  BOTTOM_TABS: 'Bottom Tabs',
+  REFERRER: 'Referrer',
+  TRADING_VIEW: "Trading View",
+  CHANGE_PASSWORD: "Change Password"
 }

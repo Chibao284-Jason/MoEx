@@ -1,16 +1,15 @@
+import React from 'react';
 import ButtonTitleWhite from '@components/ButtonTitleWhiteComponent/ButtonTitleWhiteComponent';
-import {colorsTheme} from '@config';
-import React, {useState} from 'react';
-import {View, TextInput, Alert, TouchableOpacity} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {View} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
-import {Icon} from 'react-native-elements';
 import {useTheme} from 'react-native-paper';
 import {style} from './styles';
 
 interface CategoriesProps {}
 
 const Categories = (props: CategoriesProps) => {
-  const [textSearch, setTextSearch] = useState('');
+  const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   return (
@@ -23,7 +22,7 @@ const Categories = (props: CategoriesProps) => {
       </View>
       <ButtonTitleWhite
         viewButtonStyle={styles.viewButtonAdd}
-        titleButton="Create new category"
+        titleButton={t('CREATE_CATEGORIES')}
       />
     </View>
   );

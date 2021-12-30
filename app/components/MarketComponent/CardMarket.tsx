@@ -1,5 +1,5 @@
 import {screenName} from '@navigation';
-import {useNavigation} from '@react-navigation/native';
+import {TabActions, useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {Text, View, TouchableOpacity} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
@@ -15,7 +15,13 @@ const CardMarket = (props: CardMarketProps) => {
   return (
     <TouchableOpacity
       style={styles.viewCardCoin}
-      onPress={() => navigation.navigate(screenName.COMING_SOON as never)}>
+      // onPress={() => navigation.navigate(screenName.TRADING_VIEW as never)}>
+      onPress={() => {
+        const jumpToAction = TabActions.jumpTo(screenName.EXCHANGE, {
+          key: 'Spot',
+        });
+        navigation.dispatch(jumpToAction);
+      }}>
       <View style={styles.viewImgCoin}>
         <AutoHeightImage
           width={30}

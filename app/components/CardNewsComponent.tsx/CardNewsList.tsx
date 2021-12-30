@@ -18,7 +18,7 @@ const CardNewList = (props: CardNewListProps) => {
     <View style={styles.container}>
       <View style={styles.viewTitle}>
         <TitleComponent
-          title="Tin tức mới"
+          title={t('NEWS')}
           isSubtitle={true}
           subTitle={t('VIEW_ALL')}
           subTitleStyle={styles.textViewAll}

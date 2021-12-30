@@ -12,6 +12,8 @@ import {LineLarge} from '@components/LineComponent/LineLarge';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {colorsTheme} from '@config';
 import ModalTopToCenter from '@components/ModalComponent/Modal';
+import {useNavigation} from '@react-navigation/native';
+import {screenName} from '@navigation';
 interface MenuListProps {}
 
 const MenuList = (props: MenuListProps) => {
@@ -19,6 +21,7 @@ const MenuList = (props: MenuListProps) => {
   const [isShowModal, setIsShowModal] = useState(false);
   const {colors} = useTheme();
   const {t} = useTranslation();
+  const navigation = useNavigation();
   const styles = style(colors as ThemeColors);
   const onPressAuthentication = () => {
     setSwitch(!switchOn);
@@ -35,6 +38,9 @@ const MenuList = (props: MenuListProps) => {
       <MenuButton
         label={t('CHANGE_PASSWORD')}
         iconLeft={require('../../assets/img/lock.png')}
+        onPressMenuButton={() =>
+          navigation.navigate(screenName.CHANGE_PASSWORD as never)
+        }
       />
       <MenuButton
         label={t('PAYMENT_METHODS')}
@@ -123,7 +129,7 @@ const MenuList = (props: MenuListProps) => {
       />
       <View style={styles.viewLogOut}>
         <TouchableOpacity style={styles.buttonLogOut}>
-          <Text style={styles.textLogout}>Đăng xuất</Text>
+          <Text style={styles.textLogout}>{t('LOG_OUT')}</Text>
         </TouchableOpacity>
         <Text style={styles.textVersion}>
           Version v1.0.2 - copyright SOC 2021

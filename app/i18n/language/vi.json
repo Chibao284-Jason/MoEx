@@ -45,5 +45,26 @@
   "SPOT_WALLET":"Ví Spot",
   "BROKER_WALLET":"Ví Broker",
   "EARN_WALLET":"Ví Earn",
-  "MEMBERSHIP_WALLET":"Ví Membership"
+  "MEMBERSHIP_WALLET":"Ví Membership",
+  "CHANGE_REFERRER":"Thay đổi người giới thiệu",
+  "LINK_OR_ID":"Liên kết hoặc ID người giới thiệu",
+  "ENTER_LINK_OR_ID":"Nhập liên lết hoặc ID",
+  "SAVE":"Lưu",
+  "NEW_PASSWORD":"Mật khẩu mới",
+  "CONFIRM_PASSWORD":"Xác nhận mật khẩu",
+  "COMPLETED": "Hoàn tất",
+  "DESC_LANG":"Vui lòng chọn ngôn ngữ cho tài khoản của bạn",
+  "LOG_OUT": "Đăng xuất",
+  "SWAP":"Quy đổi nhanh",
+  "SPOT":"Giao ngay",
+  "CONVERT":"Chuyển đổi",
+  "EXCHANGE_RATE":"Tỷ giá",
+  "SEND": "Gửi đi",
+  "RECEIVE": "Nhận về",
+  "NEWS":"Tin tức mới",
+  "WATCH_LIST": "Theo dõi",
+  "CATEGORIES": "Danh mục",
+  "CREATE_CATEGORIES": "Tạo danh mục mới"
+
+
 }

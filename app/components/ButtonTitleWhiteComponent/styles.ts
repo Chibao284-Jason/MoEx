@@ -6,7 +6,6 @@ type Styles = {
 }
 export const style = (colors: ThemeColors): Styles => ({
   viewLogOut: {
-    marginHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },

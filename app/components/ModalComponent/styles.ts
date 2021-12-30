@@ -27,7 +27,7 @@ export const style = (colors: ThemeColors): Styles => ({
   },
   modalView: {
     width: '60%',
-    backgroundColor: 'white',
+    backgroundColor: colors.backgroundButtonCard,
     borderRadius: 20,
     padding: 15,
     paddingHorizontal: 25,
@@ -45,7 +45,8 @@ export const style = (colors: ThemeColors): Styles => ({
     flexDirection: 'row-reverse',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: colorsTheme.whisper,
+    // backgroundColor: colorsTheme.whisper,
+    backgroundColor: colors.backgroundCardSignal,
     paddingVertical: 10,
     paddingHorizontal: 15,
     marginVertical: 5,

@@ -1,6 +1,7 @@
 import {changeLanguage} from '@store/actions/changeLanguageActions';
 import i18n from 'app/i18n/i18n';
 import React, {useEffect, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 import {Alert, Modal, Text, View, TouchableOpacity} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {useTheme} from 'react-native-paper';
@@ -12,6 +13,7 @@ interface IModalTopToCenterProps {
   onCloseModal: () => void;
 }
 const ModalTopToCenter = (props: IModalTopToCenterProps) => {
+  const {t} = useTranslation();
   const {isShowModal, onCloseModal} = props;
   const [modalVisible, setModalVisible] = useState(isShowModal);
   useEffect(() => {
@@ -35,10 +37,8 @@ const ModalTopToCenter = (props: IModalTopToCenterProps) => {
           onPress={onCloseModal}>
           <View style={styles.modalView}>
             <View style={{justifyContent: 'flex-start'}}>
-              <Text style={styles.modalText}>Ngôn ngữ</Text>
-              <Text style={styles.modalTextDesc}>
-                Vui lòng chọn ngôn ngữ cho tài khoản của bạn
-              </Text>
+              <Text style={styles.modalText}>{t('LANGUAGE')}</Text>
+              <Text style={styles.modalTextDesc}>{t('DESC_LANG')}</Text>
             </View>
 
             <TouchableOpacity

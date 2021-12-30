@@ -6,10 +6,11 @@ import {useTheme} from 'react-native-paper';
 import {style} from './styles';
 interface ExchangeCardProps {
   isMax?: boolean;
+  label: string;
 }
 
 const ExchangeCard = (props: ExchangeCardProps) => {
-  const {isMax = false} = props;
+  const {isMax = false, label} = props;
   const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
@@ -17,7 +18,7 @@ const ExchangeCard = (props: ExchangeCardProps) => {
     <View style={styles.containerExchangeCard}>
       <View style={styles.viewBodyCard}>
         <View style={styles.viewBalance}>
-          <Text style={styles.textLabel}>Gửi đi</Text>
+          <Text style={styles.textLabel}>{label}</Text>
           <Text style={styles.textLabel}>Số dư</Text>
         </View>
         <View style={styles.viewBalanceContent}>

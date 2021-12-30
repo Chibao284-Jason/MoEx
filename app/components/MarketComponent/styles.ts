@@ -26,7 +26,8 @@ type Styles = {
 export const style = (colors: ThemeColors): Styles => ({
   containerIndexMarket: {
     flex: 1,
-    backgroundColor: colors.backgroundGlobal
+    backgroundColor: colors.backgroundGlobal,
+
   },
   containerWatchList: {
     flex: 1,
@@ -35,7 +36,8 @@ export const style = (colors: ThemeColors): Styles => ({
   },
   containerCategories: {
     flex: 1,
-    backgroundColor: colors.backgroundGlobal
+    backgroundColor: colors.backgroundGlobal,
+    marginHorizontal: 20
   },
   containerMarketList: {
     backgroundColor: colors.backgroundGlobal

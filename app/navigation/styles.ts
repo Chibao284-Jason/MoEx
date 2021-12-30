@@ -17,6 +17,7 @@ export const style = (colors: ThemeColors): Styles => ({
   containerTopTab: {
     flex: 1,
     backgroundColor: colors.backgroundGlobal,
+
   },
   containerTopTabExchange: {
     flex: 1,

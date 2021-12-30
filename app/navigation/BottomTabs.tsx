@@ -1,5 +1,4 @@
 import React from 'react';
-import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
 import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
@@ -7,15 +6,13 @@ import {
 import HomeScreen from '@screens/Home';
 import {screenName} from './screenName';
 import {useTranslation} from 'react-i18next';
-import {Alert, Button, Image, Text, TouchableOpacity, View} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {TouchableOpacity, View} from 'react-native';
+import {TabActions, useNavigation} from '@react-navigation/native';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {useSelector} from 'react-redux';
 import {IThemeState} from '@models/reducers/theme';
 import {colorsTheme} from '@config';
 import WalletScreen from '@screens/Wallet';
-import ExchangeScreen from '@screens/Exchange';
-// import Temp from '@screens/Temp';
 import {enableScreens} from 'react-native-screens';
 import TopTabMarket from './TopTabMarket';
 import TopTabExchange from './TopTabExchange';
@@ -37,9 +34,7 @@ export const BottomTabs = () => {
     },
   };
   return (
-    <Tab.Navigator
-      screenOptions={homeOptions}
-      initialRouteName={screenName.EXCHANGE}>
+    <Tab.Navigator screenOptions={homeOptions}>
       <Tab.Screen
         name={screenName.HOME}
         component={HomeScreen}
@@ -118,8 +113,17 @@ export const BottomTabs = () => {
       />
       <Tab.Screen
         name={screenName.EXCHANGE}
-        // component={ExchangeScreen}
         component={TopTabExchange}
+        listeners={{
+          tabPress: e => {
+            {
+              const jumpToAction = TabActions.jumpTo(screenName.EXCHANGE, {
+                key: 'swap', // reset route exchange
+              });
+              navigation.dispatch(jumpToAction);
+            }
+          },
+        }}
         options={{
           tabBarLabel: t('EXCHANGE'),
           tabBarIcon: ({focused}) => (

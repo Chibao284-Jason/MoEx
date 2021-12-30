@@ -20,7 +20,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
   const dataExample = [
     {
       id: 0,
-      label: 'Nạp tiền',
+      label: `${t('DEPOSIT')}`,
       screenName: '',
       img: isDark
         ? require('../../assets/img/rechargeDark.png')
@@ -28,7 +28,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
     },
     {
       id: 1,
-      label: 'Rút tiền',
+      label: `${t('WITHDRAW')}`,
       screenName: '',
       img: isDark
         ? require('../../assets/img/withdrawalDark.png')
@@ -36,7 +36,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
     },
     {
       id: 2,
-      label: 'Quy đổi',
+      label: `${t('SWAP')}`,
       screenName: '',
       img: isDark
         ? require('../../assets/img/exchangeDark.png')
@@ -44,7 +44,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
     },
     {
       id: 3,
-      label: 'Đối tác',
+      label: `${t('PARTNER')}`,
       screenName: '',
       img: isDark
         ? require('../../assets/img/partnerDark.png')
@@ -76,7 +76,7 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
     },
     {
       id: 7,
-      label: 'Giới thiệu',
+      label: `${t('REFERRAL')}`,
       screenName: '',
       img: isDark
         ? require('../../assets/img/introduceDark.png')
@@ -92,7 +92,9 @@ const UtilitiesComponent = (props: UtilitiesComponentProps) => {
             <View style={styles.viewContainerButton}>
               <TouchableOpacity
                 style={styles.viewButton}
-                onPress={() => navigation.navigate(screenName.COMING_SOON)}>
+                onPress={() =>
+                  navigation.navigate(screenName.COMING_SOON as never)
+                }>
                 <AutoHeightImage source={item.img} width={25} />
                 <Text numberOfLines={1} style={styles.label}>
                   {item.label}

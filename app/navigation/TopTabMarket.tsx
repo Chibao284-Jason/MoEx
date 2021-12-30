@@ -1,22 +1,14 @@
-import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
+import React from 'react';
 import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
 import Categories from '@components/MarketComponent/Categories';
 import WatchList from '@components/MarketComponent/WatchList';
 import TouchChangeBaseCurrency from '@components/TouchBaseComponent/TouchChangeBaseCurrency';
 import MarketScreen from '@screens/Market';
-import * as React from 'react';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  SafeAreaView,
-  Touchable,
-  TouchableOpacity,
-  Text,
-} from 'react-native';
+import {View, Dimensions, SafeAreaView, Text} from 'react-native';
 import {useTheme} from 'react-native-paper';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {style} from './styles';
+import {useTranslation} from 'react-i18next';
 
 // const FirstRoute = () => <MarketScreen />;
 
@@ -27,13 +19,14 @@ import {style} from './styles';
 const initialLayout = {width: Dimensions.get('window').width};
 
 export default function TopTabMarket() {
+  const {t} = useTranslation();
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: 'first', title: 'Spot'},
-    {key: 'second', title: 'WatchList'},
-    {key: 'third', title: 'Categories'},
+    {key: 'Spot', title: `${t('SPOT')}`},
+    {key: 'WatchList', title: `${t('WATCH_LIST')}`},
+    {key: 'Categories', title: `${t('CATEGORIES')}`},
   ]);
   const renderTabBar = (props: any) => (
     <TabBar
@@ -45,9 +38,9 @@ export default function TopTabMarket() {
   );
 
   const renderScene = SceneMap({
-    first: MarketScreen,
-    second: WatchList,
-    third: Categories,
+    Spot: MarketScreen,
+    WatchList: WatchList,
+    Categories: Categories,
   });
 
   return (
@@ -58,7 +51,7 @@ export default function TopTabMarket() {
             <View>
               <Text
                 style={[styles.labelStyle, {fontSize: 28, fontWeight: '700'}]}>
-                Market
+                {t('MARKET')}
               </Text>
             </View>
             <View style={{justifyContent: 'flex-end', marginBottom: 3}}>
@@ -79,9 +72,3 @@ export default function TopTabMarket() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  scene: {
-    flex: 1,
-  },
-});

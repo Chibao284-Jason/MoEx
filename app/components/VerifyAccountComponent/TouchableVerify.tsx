@@ -29,13 +29,13 @@ const TouchableVerify = (props: TouchableVerifyProps) => {
       </View>
       <View style={styles.viewDesc}>
         <View style={styles.viewRoundButton}>
-          <TouchableOpacity style={styles.button}>
+          <View style={styles.button}>
             <AutoHeightImage
               width={25}
               style={{margin: 5}}
               source={require('../../assets/img/arrowRight.png')}
             />
-          </TouchableOpacity>
+          </View>
         </View>
       </View>
     </TouchableOpacity>

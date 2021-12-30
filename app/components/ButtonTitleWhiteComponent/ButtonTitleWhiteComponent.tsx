@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   ImageSourcePropType,
   ViewStyle,
+  TextStyle,
 } from 'react-native';
 import {useTheme} from 'react-native-paper';
 import AutoHeightImage from 'react-native-auto-height-image';
@@ -15,17 +16,19 @@ import AutoHeightImage from 'react-native-auto-height-image';
 interface ButtonTitleWhiteProps {
   titleButton?: string;
   imgIcon?: ImageSourcePropType;
-  titleStyle?: ViewStyle;
+  titleStyle?: TextStyle;
   viewButtonStyle?: ViewStyle;
+  touchButtonStyle?: ViewStyle;
 }
 
 const ButtonTitleWhite = (props: ButtonTitleWhiteProps) => {
-  const {titleButton, imgIcon, titleStyle, viewButtonStyle} = props;
+  const {titleButton, imgIcon, titleStyle, viewButtonStyle, touchButtonStyle} =
+    props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   return (
     <View style={[styles.viewLogOut, viewButtonStyle]}>
-      <TouchableOpacity style={styles.buttonLogOut}>
+      <TouchableOpacity style={[styles.buttonLogOut, touchButtonStyle]}>
         {imgIcon && <AutoHeightImage width={15} source={imgIcon} />}
         <Text style={[styles.textLogout, titleStyle]}>{titleButton}</Text>
       </TouchableOpacity>

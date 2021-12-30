@@ -4,11 +4,12 @@ import {screenName} from '@navigation';
 import {useNavigation} from '@react-navigation/native';
 import * as React from 'react';
 import {useTranslation} from 'react-i18next';
-import {Text, View, StyleSheet, FlatList} from 'react-native';
+import {Text, View, FlatList} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useTheme} from 'react-native-paper';
 import {style} from './styles';
 import TopMoversItem from './TopMoversItem';
+import {TabActions} from '@react-navigation/native';
 
 interface TopMoversListProps {
   isDark: boolean;
@@ -50,7 +51,15 @@ const TopMoversList = (props: TopMoversListProps) => {
                 price={12.3}
                 symbol="BTC"
                 onPressUtilities={() =>
-                  navigation.navigate(screenName.COMING_SOON as never)
+                  // navigation.navigate(screenName.COMING_SOON as never)
+
+                  {
+                    const jumpToAction = TabActions.jumpTo(
+                      screenName.EXCHANGE,
+                      {key: 'Spot'},
+                    );
+                    navigation.dispatch(jumpToAction);
+                  }
                 }
               />
             );
