@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "440117031734",
+    "project_id": "moex-de1f5",
+    "storage_bucket": "moex-de1f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440117031734:android:d7f37057fb42de83393997",
+        "android_client_info": {
+          "package_name": "com.socjsc.moex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440117031734-t41fclb4q7ntpj3f9pabcakiavgf4jr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.socjsc.moex",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "440117031734-3gatl53g51fsnjemb5njkeuld0cvbbed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8_wWaAAUPBpW7i4ZPbauD4dgFIpOy-Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440117031734-3gatl53g51fsnjemb5njkeuld0cvbbed.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "440117031734-ockbla2m6drb3k5653ndh5kllg8cpek4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.socjsc.moex"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

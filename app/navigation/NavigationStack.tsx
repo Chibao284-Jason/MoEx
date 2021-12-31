@@ -47,6 +47,7 @@ const AuthNavigator = () => {
         name="Login"
         component={Login}
         options={{
+          ...homeOptions,
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
         }}
       />
@@ -105,13 +106,13 @@ const App: React.FC<IProps> = (props: IProps) => {
           />
         ) : (
           <Stack.Screen
-            name="Login"
+            name="LoginScreen"
             component={AuthNavigator}
             options={{
               // When logging out, a pop animation feels intuitive
               // You can remove this if you want the default 'push' animation
+
               animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-              headerRight: () => <ThemeController />,
             }}
           />
         )}

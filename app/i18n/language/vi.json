@@ -64,7 +64,11 @@
   "NEWS":"Tin tức mới",
   "WATCH_LIST": "Theo dõi",
   "CATEGORIES": "Danh mục",
-  "CREATE_CATEGORIES": "Tạo danh mục mới"
-
+  "CREATE_CATEGORIES": "Tạo danh mục mới",
+  "SIGN_SOCIAL":"Đăng nhập với",
+  "OR_USING":"HOẶC",
+  "REGISTER":"Đăng ký",
+  "ALREADY_ACCOUNT":"Bạn đã có tài khoản?",
+  "WELCOME":"Chào mừng đến với"
 
 }

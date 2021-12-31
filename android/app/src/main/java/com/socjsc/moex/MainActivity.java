@@ -1,4 +1,4 @@
-package com.moex;
+package com.socjsc.moex;
 
 import com.facebook.react.ReactActivity;
 

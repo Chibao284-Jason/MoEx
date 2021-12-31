@@ -64,7 +64,11 @@
   "NEWS":"News",
   "WATCH_LIST": "Watch list",
   "CATEGORIES": "Categories",
-  "CREATE_CATEGORIES": "Create new categories"
-
+  "CREATE_CATEGORIES": "Create new categories",
+  "SIGN_SOCIAL":"Sign In via",
+  "OR_USING":"OR USING",
+  "REGISTER":"Register",
+  "ALREADY_ACCOUNT":"Already have an account?",
+  "WELCOME":"Welcome to"
   
 }

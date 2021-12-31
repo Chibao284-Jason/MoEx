@@ -86,7 +86,7 @@ export const colors = {
   vulcan: '#141523',
   whisper: '#F8F7FA',
   mountainMeadow: '#12B886',
-  athensGray: '#F9F9FB',
+  athensGray: '#E1E2ED',
   linkWater: '#EEF2FA',
   ebonyClay: '#1F2131',
   ebonyClay2: '#2A283F',
@@ -105,7 +105,8 @@ export const colorDefaultTheme: ThemeColors = {
   // COLORS VIEW
   backgroundGlobal: colors.white,
   backgroundCard: colors.white,
-  line: colors.whisper,
+  // line: colors.whisper,
+  line: colors.athensGray,
   backgroundItem: colors.white,
   backgroundCardSignal: colors.white,
   backgroundButton: colors.persianBlue,
@@ -117,7 +118,8 @@ export const colorDefaultTheme: ThemeColors = {
   focusTopTab: colors.persianBlue,
 
   //COLOR BORDER
-  borderColorCard: colors.linkWater,
+  // borderColorCard: colors.linkWater,
+  borderColorCard: colors.athensGray,
 
 
   //COLORS TITLE
