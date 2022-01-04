@@ -31,7 +31,8 @@ export const style = (colors: ThemeColors): Styles => ({
     fontSize: 30,
     fontWeight: '300',
     paddingHorizontal: 20,
-    marginVertical: 15
+    marginVertical: 15,
+    textAlign: 'center'
   },
   labelLogo: {
     color: colors.heading,

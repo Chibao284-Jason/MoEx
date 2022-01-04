@@ -15,13 +15,14 @@ interface LoginProps {
   onPressGoogle: () => void;
   onPressFacebook?: () => void;
   onPressApple?: () => void;
+  isApple?: boolean;
 }
 interface IState {
   themeReducer: IThemeState;
 }
 
 const Login = (props: LoginProps) => {
-  const {onPressGoogle, onPressFacebook} = props;
+  const {onPressGoogle, onPressFacebook, isApple = false, onPressApple} = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
@@ -51,14 +52,17 @@ const Login = (props: LoginProps) => {
           nameSocial="Facebook"
           onPressButtonSocial={onPressFacebook}
         />
-        <ButtonSocial
-          imgIcon={
-            !isDark
-              ? require('../../assets/img/apple.png')
-              : require('../../assets/img/appleWhite.png')
-          }
-          nameSocial="Apple"
-        />
+        {isApple && (
+          <ButtonSocial
+            imgIcon={
+              !isDark
+                ? require('../../assets/img/apple.png')
+                : require('../../assets/img/appleWhite.png')
+            }
+            nameSocial="Apple"
+            onPressButtonSocial={onPressApple}
+          />
+        )}
       </View>
       <ViewOrUsing />
       <ButtonTitleWhite

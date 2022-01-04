@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MoEx</string>
+    <string name="facebook_app_id">440526534219480</string> <string name="fb_login_protocol_scheme">fb440526534219480</string>
+
 </resources>
