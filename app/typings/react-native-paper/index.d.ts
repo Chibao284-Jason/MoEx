@@ -38,5 +38,10 @@ interface ThemeColors {
   buttonWallet: string
   textNameCoin: string
   focusTopTab: string
+  backgroundButtonSubmit: string
+  textTagFilter: string
+  textTitleHistory: string
+  backgroundHistoryDetail: string
+  backgroundStatusHistory: string
 
 }

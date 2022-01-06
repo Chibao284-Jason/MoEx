@@ -11,5 +11,10 @@ export const screenName = {
   BOTTOM_TABS: 'Bottom Tabs',
   REFERRER: 'Referrer',
   TRADING_VIEW: "Trading View",
-  CHANGE_PASSWORD: "Change Password"
+  CHANGE_PASSWORD: "Change Password",
+  REGISTER: "Register",
+  LOGIN_DEFAULT: 'Login Default',
+  FORGOT_PASSWORD: "Forgot Password",
+  HISTORY: "History",
+  HISTORY_DETAIL: "History Detail"
 }

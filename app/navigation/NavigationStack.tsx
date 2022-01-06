@@ -8,7 +8,6 @@ import {useSelector} from 'react-redux';
 import {navigationRef} from './NavigationService';
 import Login from 'app/screens/Login';
 import ForgotPassword from 'app/screens/ForgotPassword';
-import ThemeController from '../components/ThemeController';
 import {StatusBar} from 'react-native';
 import {ILoginState} from 'app/models/reducers/login';
 import ComingSoon from '@components/ComingSoonComponent/ComingSoon';
@@ -22,6 +21,10 @@ import WalletScreen from '@screens/Wallet';
 import TradingView from '@components/TradingViewComponent/TradingView';
 import Presenter from '@components/PresenterComponent/Presenter';
 import ChangePassword from '@components/ChangePasswordComponent/ChangePassword';
+import RegisterScreen from '@screens/Register';
+import LoginInput from '@screens/Login/LoginInput';
+import HistoryScreen from '@screens/History';
+import HistoryDetail from '@screens/History/HistoryDetail';
 const Stack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const LoggedInStack = createStackNavigator();
@@ -42,7 +45,7 @@ const AuthNavigator = () => {
     (state: IState) => state.loginReducer.isLoggedIn,
   );
   return (
-    <AuthStack.Navigator>
+    <AuthStack.Navigator screenOptions={homeOptions}>
       <Stack.Screen
         name="Login"
         component={Login}
@@ -51,6 +54,13 @@ const AuthNavigator = () => {
           animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
         }}
       />
+      <Stack.Screen name={screenName.REGISTER} component={RegisterScreen} />
+      <Stack.Screen name={screenName.LOGIN_DEFAULT} component={LoginInput} />
+      <Stack.Screen
+        name={screenName.FORGOT_PASSWORD}
+        component={ForgotPassword}
+      />
+
       <Stack.Screen
         name="ForgotPassword"
         component={ForgotPassword}
@@ -63,7 +73,9 @@ const AuthNavigator = () => {
 };
 
 const LoggedInNavigator = () => (
-  <LoggedInStack.Navigator screenOptions={homeOptions}>
+  <LoggedInStack.Navigator
+    screenOptions={homeOptions}
+    initialRouteName={screenName.HISTORY}>
     <Stack.Screen name={screenName.BOTTOM_TABS} component={BottomTabs} />
     <Stack.Screen name={screenName.COMING_SOON} component={ComingSoon} />
     <Stack.Screen name={screenName.REFERRER} component={Presenter} />
@@ -72,6 +84,8 @@ const LoggedInNavigator = () => (
     <Stack.Screen name={screenName.SIGNAL} component={SignalScreen} />
     <Stack.Screen name={screenName.NOTIFICATIONS} component={NotifyScreen} />
     <Stack.Screen name={screenName.EXCHANGE} component={ExchangeScreen} />
+    <Stack.Screen name={screenName.HISTORY} component={HistoryScreen} />
+    <Stack.Screen name={screenName.HISTORY_DETAIL} component={HistoryDetail} />
     <Stack.Screen
       name={screenName.CHANGE_PASSWORD}
       component={ChangePassword}
@@ -96,7 +110,6 @@ const App: React.FC<IProps> = (props: IProps) => {
   return (
     <NavigationContainer ref={navigationRef} theme={theme}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
-
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {isLoggedIn ? (
           <Stack.Screen
@@ -111,7 +124,6 @@ const App: React.FC<IProps> = (props: IProps) => {
             options={{
               // When logging out, a pop animation feels intuitive
               // You can remove this if you want the default 'push' animation
-
               animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
             }}
           />

@@ -19,16 +19,25 @@ interface ButtonTitleWhiteProps {
   titleStyle?: TextStyle;
   viewButtonStyle?: ViewStyle;
   touchButtonStyle?: ViewStyle;
+  onPressButton?: () => void;
 }
 
 const ButtonTitleWhite = (props: ButtonTitleWhiteProps) => {
-  const {titleButton, imgIcon, titleStyle, viewButtonStyle, touchButtonStyle} =
-    props;
+  const {
+    titleButton,
+    imgIcon,
+    titleStyle,
+    viewButtonStyle,
+    touchButtonStyle,
+    onPressButton,
+  } = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   return (
     <View style={[styles.viewLogOut, viewButtonStyle]}>
-      <TouchableOpacity style={[styles.buttonLogOut, touchButtonStyle]}>
+      <TouchableOpacity
+        style={[styles.buttonLogOut, touchButtonStyle]}
+        onPress={onPressButton}>
         {imgIcon && <AutoHeightImage width={15} source={imgIcon} />}
         <Text style={[styles.textLogout, titleStyle]}>{titleButton}</Text>
       </TouchableOpacity>

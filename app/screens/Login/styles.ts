@@ -4,14 +4,25 @@ import { useTheme } from "react-native-paper";
 type Styles = {
   containerLoginScreen: ViewStyle,
   containerLogin: ViewStyle,
+  containerLoginInput: ViewStyle,
   labelStyle: TextStyle,
   labelWelcome: TextStyle
   labelLogo: TextStyle,
   buttonSubmit: ViewStyle
+  buttonSubmitLoginInput: ViewStyle
+  viewHorizontal: ViewStyle
   titleSubmit: TextStyle
+  titleStyles: TextStyle
+  input: TextStyle
   textAlreadySubmit: TextStyle
+  forgetPassword: TextStyle
+  titleEmailAndPhone: TextStyle
   viewAlready: ViewStyle
   touchAlready: ViewStyle
+  viewLabelPhoneAndEmail: ViewStyle
+  viewButtonSocial: ViewStyle
+  inputContainer: ViewStyle
+
 }
 export const style = (colors: ThemeColors): Styles => ({
   containerLoginScreen: {
@@ -20,8 +31,13 @@ export const style = (colors: ThemeColors): Styles => ({
     justifyContent: 'center',
 
   },
-  containerLogin: {
+  containerLoginInput: {
+    flex: 1,
     marginHorizontal: 20
+  },
+  containerLogin: {
+    marginHorizontal: 20,
+    flex: 1,
   },
   labelStyle: {
     fontSize: 12,
@@ -40,10 +56,20 @@ export const style = (colors: ThemeColors): Styles => ({
     fontWeight: '600',
     paddingHorizontal: 20,
     marginBottom: 20
-  }, buttonSubmit: {
+  },
+  buttonSubmit: {
     backgroundColor: colorsTheme.persianBlue,
     paddingVertical: 15,
     marginVertical: 0
+  },
+  buttonSubmitLoginInput: {
+    backgroundColor: colorsTheme.persianBlue,
+    paddingVertical: 15,
+    marginTop: 30
+  },
+  viewHorizontal: {
+    marginHorizontal: 0,
+    paddingHorizontal: 0
   },
   titleSubmit: {
     color: 'white',
@@ -63,5 +89,40 @@ export const style = (colors: ThemeColors): Styles => ({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 20,
-  }
+  },
+  titleStyles: {
+    fontSize: 28,
+  },
+  viewLabelPhoneAndEmail: {
+    // marginVertical: 10,
+  },
+  viewButtonSocial: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  inputContainer: {
+    height: 40,
+    backgroundColor: colors.backgroundItem,
+    borderRadius: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    marginVertical: 10,
+    borderColor: colors.borderColorCard,
+    paddingHorizontal: 20,
+  },
+  input: {
+    fontSize: 14,
+    flex: 1,
+    color: colors.textTitleMenu,
+    paddingVertical: 5
+  },
+  forgetPassword: {
+    color: colors.textViewAll,
+    fontWeight: '700',
+  },
+  titleEmailAndPhone: {
+    fontSize: 14,
+    fontWeight: 'normal'
+  },
 });

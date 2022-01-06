@@ -69,6 +69,21 @@
   "OR_USING":"OR USING",
   "REGISTER":"Register",
   "ALREADY_ACCOUNT":"Already have an account?",
-  "WELCOME":"Welcome to"
+  "WELCOME":"Welcome to",
+  "SIGN_IN":"Sign In",
+  "DESC_REGISTER":"Enter the phone number you want to register an account with. We will send an activation code to your phone number.",
+  "DESC_REGISTER_EMAIL":"Enter the email you want to register an account with. We will send an activation code to your email.",
+  "PHONE_NUM":"Phone number",
+  "USE_EMAIL":"Use email",
+  "USE_PHONE":"Use email phone number",
+  "EMAIL_OR_PHONE":"Email or phone number",
+  "USERNAME_OR_PHONE":"Username or phone number",
+  "PASSWORD": "Password",
+  "FORGOT_PASSWORD": "Forgot password",
+  "FORGOT_DESC":"To ensure the safety of customer assets, deposit/withdrawal function will be locked within 24H",
+  "FORGOT_SUBMIT":"Password retrieval",
+  "ENTER_PHONE":"Enter your phone number",
+  "ENTER_EMAIL":"Enter email",
+  "EMAIL":"Email"
   
 }

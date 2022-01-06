@@ -98,7 +98,11 @@ export const colors = {
   dullLavender: '#9D92E1',
   arapawa: '#1D0E6B',
   cornflowerBlue: '#7658FF',
-  royalBlue: '#5547F4'
+  royalBlue: '#5547F4',
+  abbey: '#525254',
+  woodSmoke: "#121117",
+  appleGreen: "#E7F6F1",
+  gableGreen: "#11252B"
 };
 
 export const colorDefaultTheme: ThemeColors = {
@@ -115,8 +119,10 @@ export const colorDefaultTheme: ThemeColors = {
   backgroundButtonCard: colors.whisper,
   backgroundExchange: colors.blackSqueeze,
   backgroundWallet: colors.arapawa,
+  backgroundButtonSubmit: colors.dullLavender,
   focusTopTab: colors.persianBlue,
-
+  backgroundHistoryDetail: colors.linkWater,
+  backgroundStatusHistory: colors.appleGreen,
   //COLOR BORDER
   // borderColorCard: colors.linkWater,
   borderColorCard: colors.athensGray,
@@ -136,7 +142,9 @@ export const colorDefaultTheme: ThemeColors = {
   labelButtonColor: colors.scarpaFlow,
   labelSwap: colors.white,
   buttonWallet: colors.cornflowerBlue,
-  textNameCoin: colors.mirageB
+  textNameCoin: colors.mirageB,
+  textTagFilter: colors.scarpaFlow,
+  textTitleHistory: colors.abbey
 
 }
 export const colorDarkTheme: ThemeColors = {
@@ -156,7 +164,11 @@ export const colorDarkTheme: ThemeColors = {
   backgroundButtonCard: colors.mirageB,
   backgroundExchange: colors.vulcan,
   backgroundWallet: colors.vulcan,
+  backgroundButtonSubmit: colors.vulcan,
   focusTopTab: colors.white,
+  backgroundHistoryDetail: colors.woodSmoke,
+  backgroundStatusHistory: colors.gableGreen,
+
 
   //COLOR BORDER
   borderColorCard: colors.transparent,
@@ -175,6 +187,8 @@ export const colorDarkTheme: ThemeColors = {
   labelButtonColor: colors.manatee,
   labelSwap: colors.geyser,
   buttonWallet: colors.royalBlue,
-  textNameCoin: colors.whisper
+  textNameCoin: colors.whisper,
+  textTagFilter: colors.white,
+  textTitleHistory: colors.abbey
 
 }

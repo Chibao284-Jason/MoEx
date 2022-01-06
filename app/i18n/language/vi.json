@@ -69,6 +69,22 @@
   "OR_USING":"HOẶC",
   "REGISTER":"Đăng ký",
   "ALREADY_ACCOUNT":"Bạn đã có tài khoản?",
-  "WELCOME":"Chào mừng đến với"
+  "WELCOME":"Chào mừng đến với",
+  "SIGN_IN":"Đăng nhập",
+  "DESC_REGISTER":"Nhập số điện thoại bạn muốn đăng ký tài khoản. Chúng tôi sẽ gửi một mã kích hoạt đến số điện thoại của bạn.",
+  "DESC_REGISTER_EMAIL":"Nhập email bạn muốn đăng ký tài khoản. Chúng tôi sẽ gửi mã kích hoạt đến email của bạn.",
+  "PHONE_NUM":"Số điện thoại",
+  "USE_EMAIL":"Sử dụng email",
+  "USE_PHONE":"Sử dụng số điện thoại",
+  "EMAIL_OR_PHONE":"Email hoặc số điện thoại",
+  "USERNAME_OR_PHONE":"Tên đăng nhập hoặc số điện thoại",
+  "PASSWORD": "Mật khẩu",
+  "FORGOT_PASSWORD": "Quên mật khẩu",
+  "FORGOT_DESC":"Để đảm bảo an toàn cho tài sản của khách hàng, chức năng nạp / rút sẽ bị khóa trong vòng 24H",
+  "FORGOT_SUBMIT":"Lấy lại mật khấu",
+  "ENTER_PHONE":"Nhập số điện thoại",
+  "ENTER_EMAIL":"Nhập email",
+  "EMAIL":"Email"
+ 
 
 }

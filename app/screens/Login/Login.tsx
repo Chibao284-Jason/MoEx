@@ -1,11 +1,13 @@
 import ButtonSocial from '@components/ButtonSocialComponent/ButtonSocial';
 import ButtonTitleWhite from '@components/ButtonTitleWhiteComponent/ButtonTitleWhiteComponent';
+import ViewAlready from '@components/ViewAlreadyComponent/ViewAldready';
 import ViewOrUsing from '@components/ViewOrUsingComponent/ViewOrUsing';
-import {colorsTheme} from '@config';
 import {IThemeState} from '@models/reducers/theme';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {useTheme} from 'react-native-paper';
 import {useSelector} from 'react-redux';
@@ -26,6 +28,7 @@ const Login = (props: LoginProps) => {
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
+  const navigation = useNavigation();
   const {t} = useTranslation();
   return (
     <ScrollView
@@ -69,13 +72,14 @@ const Login = (props: LoginProps) => {
         titleButton={t('REGISTER')}
         titleStyle={styles.titleSubmit}
         touchButtonStyle={styles.buttonSubmit}
+        onPressButton={() => navigation.navigate(screenName.REGISTER as never)}
       />
-      <View style={styles.viewAlready}>
-        <Text style={{color: colorsTheme.manatee}}>{t('ALREADY_ACCOUNT')}</Text>
-        <TouchableOpacity style={styles.touchAlready}>
-          <Text style={styles.textAlreadySubmit}>Sign In</Text>
-        </TouchableOpacity>
-      </View>
+      <ViewAlready
+        viewAlreadyStyle={{marginTop: 20}}
+        onPressAlready={() =>
+          navigation.navigate(screenName.LOGIN_DEFAULT as never)
+        }
+      />
     </ScrollView>
   );
 };

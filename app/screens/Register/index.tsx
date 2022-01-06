@@ -7,7 +7,6 @@ interface RegisterScreenProps {}
 
 const RegisterScreen = (props: RegisterScreenProps) => {
   const {colors} = useTheme();
-
   const styles = style(colors as ThemeColors);
   return (
     <SafeAreaView style={styles.containerRegisterScreen}>
@@ -17,7 +16,3 @@ const RegisterScreen = (props: RegisterScreenProps) => {
 };
 
 export default RegisterScreen;
-
-const styles = StyleSheet.create({
-  container: {},
-});

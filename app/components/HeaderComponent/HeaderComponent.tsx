@@ -10,6 +10,8 @@ import {
   Text,
 } from 'react-native';
 import ButtonNotifications from '@components/ButtonHeaderComponent/ButtonNotifications';
+import {useSelector} from 'react-redux';
+import {IThemeState} from '@models/reducers/theme';
 
 interface IHeaderComponentProps {
   isButtonLeft?: boolean;
@@ -34,6 +36,10 @@ interface IHeaderComponentProps {
   iconNotify?: ImageSourcePropType;
   customButtonRight?: Element;
   customButtonLeft?: Element;
+}
+
+interface IState {
+  themeReducer: IThemeState;
 }
 
 const HeaderComponent = (props: IHeaderComponentProps) => {
@@ -62,6 +68,10 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
   } = props;
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
+  const isDark = useSelector((state: IState) => state.themeReducer.isDark);
+  const iconLeftDefault = !isDark
+    ? require('../../assets/img/goBack.png')
+    : require('../../assets/img/goBackDark.png');
   return (
     <View style={[styles.viewHeader, styleHeader]}>
       <View style={styles.viewContainer}>
@@ -69,11 +79,10 @@ const HeaderComponent = (props: IHeaderComponentProps) => {
         {isButtonLeft && headerLeft && (
           <ButtonHeaderComponent
             imgIcon={
-              iconLeft
-                ? iconLeft
-                : {
-                    uri: 'https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png',
-                  }
+              iconLeft ? iconLeft : iconLeftDefault
+              // {
+              //     uri: 'https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png',
+              //   }
             }
             onPress={headerLeft}
             iconStyles={iconLeftStyle}

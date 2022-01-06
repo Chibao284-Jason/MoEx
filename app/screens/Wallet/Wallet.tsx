@@ -2,6 +2,8 @@ import {LineLarge} from '@components/LineComponent/LineLarge';
 import TitleComponent from '@components/TitleComponent/TitleComponent';
 import ButtonDepositWithdraw from '@components/WalletComponent/ButtonDepositWithdraw';
 import WalletItem from '@components/WalletComponent/WalletItem';
+import {screenName} from '@navigation';
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {View, ScrollView, TouchableOpacity, Text} from 'react-native';
@@ -12,6 +14,7 @@ const Wallet = () => {
   const {colors} = useTheme();
   const styles = style(colors as ThemeColors);
   const [isShow, setIsShow] = useState(true);
+  const navigation = useNavigation();
   const toggleShow = () => {
     setIsShow(!isShow);
   };
@@ -47,6 +50,9 @@ const Wallet = () => {
             subTitle={t('HISTORY')}
             isSubtitle
             subTitleStyle={styles.labelHistory}
+            onPressSubTitle={() =>
+              navigation.navigate(screenName.HISTORY as never)
+            }
           />
           <View style={styles.viewWalletList}>
             <WalletItem
