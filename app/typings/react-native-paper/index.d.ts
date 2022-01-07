@@ -43,5 +43,6 @@ interface ThemeColors {
   textTitleHistory: string
   backgroundHistoryDetail: string
   backgroundStatusHistory: string
+  backgroundTextInputPress: string
 
 }

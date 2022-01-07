@@ -123,6 +123,7 @@ export const colorDefaultTheme: ThemeColors = {
   focusTopTab: colors.persianBlue,
   backgroundHistoryDetail: colors.linkWater,
   backgroundStatusHistory: colors.appleGreen,
+  backgroundTextInputPress: colors.white,
   //COLOR BORDER
   // borderColorCard: colors.linkWater,
   borderColorCard: colors.athensGray,
@@ -168,6 +169,7 @@ export const colorDarkTheme: ThemeColors = {
   focusTopTab: colors.white,
   backgroundHistoryDetail: colors.woodSmoke,
   backgroundStatusHistory: colors.gableGreen,
+  backgroundTextInputPress: colors.ebonyClay,
 
 
   //COLOR BORDER

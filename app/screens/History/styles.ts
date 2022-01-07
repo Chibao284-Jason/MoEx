@@ -9,6 +9,8 @@ type Styles = {
   viewHorizontal: ViewStyle
   viewCoverStatusAndValue: ViewStyle
   viewStatus: ViewStyle
+  bottomSheetContainer: ViewStyle
+  bottomSheetWrapper: ViewStyle
   imgCoinHistoryDetail: ImageStyle
   textValue: TextStyle
   textStatus: TextStyle
@@ -71,5 +73,13 @@ export const style = (colors: ThemeColors): Styles => ({
     marginVertical: 5,
     fontSize: 16,
     fontWeight: '500',
+  },
+  bottomSheetWrapper: {
+    backgroundColor: '#8C8C8C9A',
+  },
+  bottomSheetContainer: {
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    backgroundColor: colors.backgroundGlobal,
   }
 })

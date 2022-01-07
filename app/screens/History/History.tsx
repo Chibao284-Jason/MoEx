@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useTranslation} from 'react-i18next';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, Button} from 'react-native';
 import {useTheme} from 'react-native-paper';
 import {style} from './styles';
 import HeaderComponent from '@components/HeaderComponent/HeaderComponent';
@@ -10,7 +10,8 @@ import {IThemeState} from '@models/reducers/theme';
 import TagFilter from '@components/TagComponent/TagFilter';
 import CardHistory from '@components/CardHistoryComponent/CardHistory';
 import {screenName} from '@navigation';
-
+import RBSheet from 'react-native-raw-bottom-sheet';
+import Filter from '@components/FilterComponent/Filter';
 interface HistoryProps {}
 
 interface IState {
@@ -23,6 +24,7 @@ const History = (props: HistoryProps) => {
   const navigation = useNavigation();
   const styles = style(colors as ThemeColors);
   const isDark = useSelector((state: IState) => state.themeReducer.isDark);
+  const refRBSheet = useRef<any>();
   const dataFilter = [
     {
       id: 1,
@@ -60,7 +62,7 @@ const History = (props: HistoryProps) => {
         headerLeft={() => navigation.goBack()}
         title="Lịch sử giao dịch"
         isButtonRight
-        headerRight={() => console.log()}
+        headerRight={() => refRBSheet.current.open()}
         iconRight={
           isDark
             ? require('../../assets/img/filterHistoryWhite.png')
@@ -92,6 +94,21 @@ const History = (props: HistoryProps) => {
           );
         }}
       />
+
+      <RBSheet
+        closeOnPressMask={true}
+        ref={refRBSheet}
+        closeOnDragDown={true}
+        height={700}
+        customStyles={{
+          wrapper: styles.bottomSheetWrapper,
+          container: styles.bottomSheetContainer,
+          draggableIcon: {
+            backgroundColor: '#000',
+          },
+        }}>
+        <Filter />
+      </RBSheet>
     </View>
   );
 };
